@@ -1,6 +1,7 @@
 package com.dsa.trees;
 
 import com.dsa.trees.patterns.LeftView;
+import com.dsa.trees.properties.ChildSumProperty;
 import com.dsa.trees.traversals.*;
 /**
  *
@@ -47,5 +48,13 @@ public class Executor {
 
         System.out.println("");
         System.out.println("maxOfBT  of simpleBinaryBT: " + MaxOfBT.maxOfBT(simpleBinaryBT));
+
+        Node childSumPropertyBT = ChildSumPropertyBT.getChildSumPropertyBT();
+        System.out.println("");
+        System.out.println("Does childSumPropertyBT follow childSumProperty: " + ChildSumProperty.childSumProperty(childSumPropertyBT));
+
+        System.out.println("");
+        System.out.println("Does simpleBinaryBT follow childSumProperty: " + ChildSumProperty.childSumProperty(simpleBinaryBT));
+
     }
 }
