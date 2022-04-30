@@ -1,6 +1,5 @@
 package com.dsa.trees.properties;
 
-import com.dsa.trees.HeightBt;
 import com.dsa.trees.Node;
 /**
  *

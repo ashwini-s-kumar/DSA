@@ -2,8 +2,7 @@ package com.dsa.trees;
 
 import com.dsa.trees.patterns.LeftView;
 import com.dsa.trees.patterns.PrintKthLevel;
-import com.dsa.trees.properties.BalancedBT;
-import com.dsa.trees.properties.ChildSumProperty;
+import com.dsa.trees.properties.*;
 import com.dsa.trees.traversals.*;
 /**
  *

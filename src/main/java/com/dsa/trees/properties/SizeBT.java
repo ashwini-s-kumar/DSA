@@ -1,4 +1,7 @@
-package com.dsa.trees;
+package com.dsa.trees.properties;
+
+import com.dsa.trees.Node;
+
 /**
  *
  * @author ashwini.s
