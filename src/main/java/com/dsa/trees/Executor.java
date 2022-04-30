@@ -67,5 +67,9 @@ public class Executor {
         System.out.println("");
         System.out.println("printKthLevel traversal of simpleBinaryBT:");
         PrintKthLevel.printKthLevel(simpleBinaryBT,2);
+
+        System.out.println("");
+        System.out.println("maxWidth of simpleBinaryBT:" + MaxWidthBT.maxWidthBT(simpleBinaryBT));
+
     }
 }
