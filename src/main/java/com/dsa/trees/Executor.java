@@ -1,6 +1,7 @@
 package com.dsa.trees;
 
 import com.dsa.trees.patterns.LeftView;
+import com.dsa.trees.properties.BalancedBT;
 import com.dsa.trees.properties.ChildSumProperty;
 import com.dsa.trees.traversals.*;
 /**
@@ -55,6 +56,13 @@ public class Executor {
 
         System.out.println("");
         System.out.println("Does simpleBinaryBT follow childSumProperty: " + ChildSumProperty.childSumProperty(simpleBinaryBT));
+
+        Node unBalancedBT = BinaryTree.getUnBalancedBT();
+        System.out.println("");
+        System.out.println("Does unBalancedBT balanced " + BalancedBT.isBalancedBT(unBalancedBT));
+
+        System.out.println("");
+        System.out.println("Does simpleBinaryBT balanced " + BalancedBT.isBalancedBT(simpleBinaryBT));
 
     }
 }
