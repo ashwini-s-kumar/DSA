@@ -3,7 +3,7 @@ package com.dsa.trees;
  *
  * @author ashwini.s
  */
-public class SimpleBinaryBT {
+public class BinaryTree {
     /*
              10
        2           15
@@ -18,6 +18,16 @@ public class SimpleBinaryBT {
         root.left.right = new Node(5);
         root.right.left = new Node(6);
         root.right.right = new Node(7);
+        return root;
+    }
+
+    public static Node getChildSumPropertyBT()
+    {
+        Node root = new Node(20);
+        root.left = new Node(8);
+        root.right = new Node(12);
+        root.left.left = new Node(3);
+        root.left.right= new Node(5);
         return root;
     }
 }

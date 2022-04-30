@@ -10,7 +10,7 @@ import com.dsa.trees.traversals.*;
 public class Executor {
     public static void main(String [] arr)
     {
-        Node simpleBinaryBT = SimpleBinaryBT.getSimpleBinaryBT();
+        Node simpleBinaryBT = BinaryTree.getSimpleBinaryBT();
 
         System.out.println("");
         System.out.println("inOrder traversal of simpleBinaryBT:");
@@ -49,7 +49,7 @@ public class Executor {
         System.out.println("");
         System.out.println("maxOfBT  of simpleBinaryBT: " + MaxOfBT.maxOfBT(simpleBinaryBT));
 
-        Node childSumPropertyBT = ChildSumPropertyBT.getChildSumPropertyBT();
+        Node childSumPropertyBT = BinaryTree.getChildSumPropertyBT();
         System.out.println("");
         System.out.println("Does childSumPropertyBT follow childSumProperty: " + ChildSumProperty.childSumProperty(childSumPropertyBT));
 
