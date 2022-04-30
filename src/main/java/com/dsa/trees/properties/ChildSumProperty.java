@@ -1,7 +1,10 @@
 package com.dsa.trees.properties;
 
 import com.dsa.trees.Node;
-
+/**
+ *
+ * @author ashwini.s
+ */
 public class ChildSumProperty {
     public static Boolean childSumProperty(Node root)
     {
