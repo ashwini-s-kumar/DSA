@@ -1,6 +1,7 @@
 package com.dsa.trees;
 
 import com.dsa.trees.patterns.LeftView;
+import com.dsa.trees.patterns.PrintKthLevel;
 import com.dsa.trees.properties.BalancedBT;
 import com.dsa.trees.properties.ChildSumProperty;
 import com.dsa.trees.traversals.*;
@@ -64,5 +65,8 @@ public class Executor {
         System.out.println("");
         System.out.println("Does simpleBinaryBT balanced " + BalancedBT.isBalancedBT(simpleBinaryBT));
 
+        System.out.println("");
+        System.out.println("printKthLevel traversal of simpleBinaryBT:");
+        PrintKthLevel.printKthLevel(simpleBinaryBT,2);
     }
 }
