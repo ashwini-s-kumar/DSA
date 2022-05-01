@@ -7,8 +7,10 @@ public class Node {
     public int data;
     public Node left;
     public Node right;
-    Node(int x)
+    public Node(int x)
     {
         this.data = x;
+        left = null;
+        right = null;
     }
 }

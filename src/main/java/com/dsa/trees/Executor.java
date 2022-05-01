@@ -1,9 +1,15 @@
 package com.dsa.trees;
 
+import com.dsa.trees.convert.BinaryTreeToDLL;
 import com.dsa.trees.patterns.LeftView;
 import com.dsa.trees.patterns.PrintKthLevel;
 import com.dsa.trees.properties.*;
 import com.dsa.trees.traversals.*;
+import com.dsa.trees.convert.ContructBT;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 /**
  *
  * @author ashwini.s
@@ -71,5 +77,21 @@ public class Executor {
         System.out.println("");
         System.out.println("maxWidth of simpleBinaryBT:" + MaxWidthBT.maxWidthBT(simpleBinaryBT));
 
+        System.out.println("");
+        System.out.println("BTtoDLL of simpleBinaryBT: ");
+        PrintList.printList(BinaryTreeToDLL.binaryTreeToDLL(simpleBinaryBT));
+
+        System.out.println("");
+        System.out.println("ContructBT :");
+        int [] inOrder = {20,10,40,30,50};
+        System.out.println("the inOrder :"+ Arrays.toString(inOrder));
+        int [] preOrder = {10,20,30,40,50};
+        System.out.println("the preOrder :"+Arrays.toString(preOrder));
+        System.out.println("the Constructed BT :");
+        LevelOrderLineWise.levelOrderLineWise(ContructBT.constructBT(inOrder,preOrder,0,inOrder.length-1));
+
+        System.out.println("");
+        System.out.println("spiralView of simpleBinaryBT: ");
+        SpiralView.spiralView(simpleBinaryBT);
     }
 }
