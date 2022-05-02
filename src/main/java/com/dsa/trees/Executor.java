@@ -104,5 +104,14 @@ public class Executor {
         System.out.println("");
         System.out.println("SpiralViewReverseMethod of simpleBinaryBT: ");
         SpiralViewReverseMethod.spiralView(simpleBinaryBT);
+
+        System.out.println("");
+        System.out.println("DiameterBT of simpleBinaryBT: " + DiameterBT.diameterBT(simpleBinaryBT));
+
+        System.out.println("");
+        System.out.println("LCA of (4,5) in simpleBinaryBT: " + LowestCommonAncestorBT.lCA(simpleBinaryBT,4,5).data);
+
+        System.out.println("");
+        System.out.println("LCA of (15,6) in simpleBinaryBT: " + LowestCommonAncestorBT.lCA(simpleBinaryBT,15,6).data);
     }
 }
