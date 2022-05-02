@@ -7,7 +7,6 @@ import com.dsa.trees.properties.*;
 import com.dsa.trees.traversals.*;
 import com.dsa.trees.convert.ContructBT;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /**
@@ -80,6 +79,7 @@ public class Executor {
         System.out.println("");
         System.out.println("BTtoDLL of simpleBinaryBT: ");
         PrintList.printList(BinaryTreeToDLL.binaryTreeToDLL(simpleBinaryBT));
+        simpleBinaryBT = BinaryTree.getSimpleBinaryBT();
 
         System.out.println("");
         System.out.println("ContructBT :");
@@ -91,7 +91,15 @@ public class Executor {
         LevelOrderLineWise.levelOrderLineWise(ContructBT.constructBT(inOrder,preOrder,0,inOrder.length-1));
 
         System.out.println("");
-        System.out.println("spiralView of simpleBinaryBT: ");
-        SpiralView.spiralView(simpleBinaryBT);
+        System.out.println("SpiralViewBasic of simpleBinaryBT: ");
+        SpiralViewBasic.spiralView(simpleBinaryBT);
+
+        System.out.println("");
+        System.out.println("SpiralViewTwoStackMethod of simpleBinaryBT: ");
+        SpiralViewTwoStackMethod.spiralView(simpleBinaryBT);
+
+        System.out.println("");
+        System.out.println("SpiralViewReverseMethod of simpleBinaryBT: ");
+        SpiralViewReverseMethod.spiralView(simpleBinaryBT);
     }
 }
