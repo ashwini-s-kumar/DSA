@@ -1,4 +1,4 @@
-package com.dsa.trees.patterns;
+package com.dsa.trees.views;
 
 import com.dsa.trees.Node;
 /**

@@ -1,7 +1,8 @@
-package com.dsa.trees.traversals;
+package com.dsa.trees.views;
 
 import com.dsa.trees.Node;
 import com.dsa.trees.properties.HeightBt;
+
 /**
  *
  * @author ashwini.s

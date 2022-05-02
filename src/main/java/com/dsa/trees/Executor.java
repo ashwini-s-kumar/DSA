@@ -1,8 +1,7 @@
 package com.dsa.trees;
 
 import com.dsa.trees.convert.BinaryTreeToDLL;
-import com.dsa.trees.patterns.LeftView;
-import com.dsa.trees.patterns.PrintKthLevel;
+import com.dsa.trees.views.*;
 import com.dsa.trees.properties.*;
 import com.dsa.trees.traversals.*;
 import com.dsa.trees.convert.ContructBT;
@@ -46,8 +45,12 @@ public class Executor {
         LevelOrderLineWise.levelOrderLineWise(simpleBinaryBT);
 
         System.out.println("");
-        System.out.println("leftView traversal of simpleBinaryBT:");
+        System.out.println("LeftView traversal of simpleBinaryBT:");
         LeftView.leftView(simpleBinaryBT);
+
+        System.out.println("");
+        System.out.println("RightView traversal of simpleBinaryBT:");
+        RightView.rightView(simpleBinaryBT);
 
         System.out.println("");
         System.out.println("sizeBT  of simpleBinaryBT: " + SizeBT.sizeBT(simpleBinaryBT));
