@@ -7,7 +7,7 @@ import com.dsa.binarytree.properties.HeightBt;
  *
  * @author ashwini.s
  */
-public class SpiralViewBasic {
+public class ZigZagViewBasic {
     public static void spiralView(Node root)
     {
         boolean ltr = true;

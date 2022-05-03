@@ -8,12 +8,11 @@ import java.util.Stack;
  *
  * @author ashwini.s
  */
-public class SpiralViewTwoStackMethod {
+public class ZigZagViewTwoStackMethod {
     public static void spiralView(Node root){
         if(root==null)return;
         Stack<Node> s1=new Stack<>(); // left to right
         Stack<Node> s2=new Stack<>(); // right to left
-        boolean reverse=false;
         s1.add(root);
         while(!s1.isEmpty() || !s2.isEmpty()){
             while(!s1.isEmpty())

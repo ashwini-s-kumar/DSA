@@ -98,15 +98,15 @@ public class BTExecutor {
 
         System.out.println("");
         System.out.println("SpiralViewBasic of simpleBinaryBT: ");
-        SpiralViewBasic.spiralView(simpleBinaryBT);
+        ZigZagViewBasic.spiralView(simpleBinaryBT);
 
         System.out.println("");
         System.out.println("SpiralViewTwoStackMethod of simpleBinaryBT: ");
-        SpiralViewTwoStackMethod.spiralView(simpleBinaryBT);
+        ZigZagViewTwoStackMethod.spiralView(simpleBinaryBT);
 
         System.out.println("");
         System.out.println("SpiralViewReverseMethod of simpleBinaryBT: ");
-        SpiralViewReverseMethod.spiralView(simpleBinaryBT);
+        ZigZagViewReverseMethod.spiralView(simpleBinaryBT);
 
         System.out.println("");
         System.out.println("DiameterBT of simpleBinaryBT: " + DiameterBT.diameterBT(simpleBinaryBT));

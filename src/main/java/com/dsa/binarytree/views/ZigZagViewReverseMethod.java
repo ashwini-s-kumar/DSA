@@ -10,7 +10,7 @@ import java.util.Stack;
  *
  * @author ashwini.s
  */
-public class SpiralViewReverseMethod {
+public class ZigZagViewReverseMethod {
     public static void spiralView(Node root){
         if(root==null)return;
         Queue<Node> q=new LinkedList<>();
