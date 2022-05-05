@@ -1,5 +1,6 @@
 package com.dsa.binarytree;
 
+import com.dsa.binarysearchtree.BinarySearchTree;
 import com.dsa.binarytree.convert.BinaryTreeToDLL;
 import com.dsa.binarytree.convert.DeserializePerOrderApproach;
 import com.dsa.binarytree.convert.SerializePreOrderApproach;
@@ -155,5 +156,12 @@ public class BTExecutor {
         System.out.println(" ");
         System.out.println("minTime to burn  simpleBinaryBT from target node "+simpleBinaryBT.left.left.data+"  : "+ BurnBTFromTargetNode.getBurnTimefromTargetNode(simpleBinaryBT,simpleBinaryBT.left.left)+" Secs");
 
+        System.out.println(" ");
+        System.out.println("clockWiseView of  simpleBST :");
+        ClockWiseView.clockWiseView(BinarySearchTree.getSimpleBST());
+
+        System.out.println(" ");
+        System.out.println("clockWiseView of  simpleBinaryBT :");
+        ClockWiseView.clockWiseView(simpleBinaryBT);
     }
 }
