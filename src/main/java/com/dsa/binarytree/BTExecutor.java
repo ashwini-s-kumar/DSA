@@ -4,6 +4,7 @@ import com.dsa.binarytree.convert.BinaryTreeToDLL;
 import com.dsa.binarytree.convert.DeserializePerOrderApproach;
 import com.dsa.binarytree.convert.SerializePreOrderApproach;
 import com.dsa.binarytree.operations.BurnBTFromLeaf;
+import com.dsa.binarytree.operations.BurnBTFromTargetNode;
 import com.dsa.binarytree.views.*;
 import com.dsa.binarytree.properties.*;
 import com.dsa.binarytree.traversals.*;
@@ -20,7 +21,7 @@ public class BTExecutor {
     public static void main(String [] arr)
     {
         Node simpleBinaryBT = BinaryTree.getSimpleBinaryBT();
-/*
+
         System.out.println("");
         System.out.println("inOrder traversal of simpleBinaryBT:");
         InOrder.inOrder(simpleBinaryBT);
@@ -139,15 +140,20 @@ public class BTExecutor {
                           40      50
                              60     70
 
-
+*/
         int [] d_arr =  {10,20,-1,-1,30,40,-1,60,-1,-1,50,-1,70,-1,-1};
         System.out.println("calling deserialise for arr :" + Arrays.toString(d_arr));
         Node deserialisedRoot = DeserializePerOrderApproach.deserialize(d_arr);
         System.out.println(" Level Order Traversal of desrialized tree :");
         LevelOrderLineWise.levelOrderLineWise(deserialisedRoot);
-*/
 
+        BurnBTFromLeaf burn = new BurnBTFromLeaf();
         System.out.println(" ");
-        System.out.println("minTime to burn  simpleBinaryBT from 6 : "+ BurnBTFromLeaf.minBurnTime(simpleBinaryBT,6)+" Secs");
+        System.out.println("minTime to burn  simpleBinaryBT from leaf node 6 : "+ burn.minBurnTime(simpleBinaryBT,6)+" Secs");
+
+        simpleBinaryBT = BinaryTree.getSimpleBinaryBT();
+        System.out.println(" ");
+        System.out.println("minTime to burn  simpleBinaryBT from target node "+simpleBinaryBT.left.left.data+"  : "+ BurnBTFromTargetNode.getBurnTimefromTargetNode(simpleBinaryBT,simpleBinaryBT.left.left)+" Secs");
+
     }
 }

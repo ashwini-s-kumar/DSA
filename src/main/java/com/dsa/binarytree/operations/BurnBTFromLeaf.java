@@ -10,7 +10,7 @@ class Depth{
 }
 public class BurnBTFromLeaf {
     static int minTime = -1;
-    public static int minBurnTime(Node root, int target)
+    public int minBurnTime(Node root, int target)
     {
         Depth depth = new Depth(-1);
         BurnBTFromLeaf b = new BurnBTFromLeaf();
