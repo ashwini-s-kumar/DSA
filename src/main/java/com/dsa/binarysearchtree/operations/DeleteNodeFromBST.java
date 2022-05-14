@@ -21,7 +21,7 @@ public class DeleteNodeFromBST {
             root.left = deleteNodeFromBST(root.left , key);
         else if(key > root.data)
             root.right = deleteNodeFromBST(root.right , key);
-        else {
+        else {//key == root.data
             if (root.left == null)
                 return root.right;
             else if (root.right == null)
