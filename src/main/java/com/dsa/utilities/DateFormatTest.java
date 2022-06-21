@@ -1,11 +1,8 @@
-package com.dsa.trail;
-
-import com.sun.org.slf4j.internal.LoggerFactory;
+package com.dsa.utilities;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.Logger;
 
 
 public class DateFormatTest {
