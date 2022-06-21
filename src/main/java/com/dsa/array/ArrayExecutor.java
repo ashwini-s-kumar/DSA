@@ -1,5 +1,7 @@
 package com.dsa.array;
 
+import com.dsa.array.patterns.PascalTriangle;
+
 public class ArrayExecutor {
     public static void main(String [] arr)
     {
@@ -13,5 +15,17 @@ public class ArrayExecutor {
         PrintArray.print(moveNumber);
         System.out.println(" , toMove = "+toMove+ ", array after moving "+ toMove);
         MoveNumberToEndOfArray.moveAllInstancesToEnd(moveNumber, toMove);
+
+        PascalTriangle pascalTriangle = new PascalTriangle();
+        System.out.println("print full pascal triangle with row : 6");
+        pascalTriangle.print(25);
+
+        System.out.println("print row pascal triangle with row : 6");
+        int [] row = pascalTriangle.getRow(25);
+        for(int i=0;i<row.length;i++)
+        {
+            System.out.print(row[i]+" ");
+        }
+
     }
 }

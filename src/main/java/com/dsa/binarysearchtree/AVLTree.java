@@ -5,7 +5,8 @@ import com.dsa.binarytree.properties.HeightBt;
 import com.dsa.binarytree.traversals.PreOrder;
 
 public class AVLTree {
-    Node root;
+    String s ="{\"bool\":{\"must\":[],\"filter\":[{\"match_all\":{}},{\"exists\":{\"field\":\"http_method\"}},{\"exists\":{\"field\":\"http_status_code\"}},{\"exists\":{\"field\":\"http_url\"}},{\"exists\":{\"field\":\"request_time\"}},{\"exists\":{\"field\":\"kubernetes_pod_name\"}},{\"exists\":{\"field\":\"kubernetes_namespace\"}},{\"range\":{\"startTimeMillis\":{\"gte\":\"2022-06-03T12:28:48.905Z\",\"lte\":\"2022-06-03T12:43:48.905Z\",\"format\":\"strict_date_optional_time\"}}}],\"should\":[],\"must_not\":[{\"match_phrase\":{\"http_url\":\"*/metrics\"}}]}}";
+            Node root;
     Node rightRotate(Node y)
     {
         Node x = y.left;
