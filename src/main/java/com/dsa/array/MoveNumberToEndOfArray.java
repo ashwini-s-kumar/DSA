@@ -4,6 +4,7 @@ public class MoveNumberToEndOfArray {
     //Use same Array
     public static void moveAllInstancesToEnd(int [] array, int toMove)
     {
+        PrintArray printArray = new PrintArray();
 // Mark left pointer
         int i = 0;
 
@@ -26,7 +27,7 @@ public class MoveNumberToEndOfArray {
             // Increment left pointer
             i++;
         }
-        PrintArray.print(array);
+        printArray.print(array);
     }
 
     static int[] swap(int []arr, int i, int j)
