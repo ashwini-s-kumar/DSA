@@ -36,25 +36,29 @@ public class ArrayExecutor {
         int [] arr1 = {100, 90, 80, 70, 60, 50};
         printArray.print(arr1);
         System.out.print( " is : ");
-        printArray.print(rev.reverseArray(arr1, 0, arr1.length-1));
+        rev.reverseArray(arr1, 0, arr1.length-1);
+        printArray.print(arr1);
 
         System.out.println(" ");
         System.out.print(" Left Rotate by 1 position of the  array : ");
         printArray.print(arr1);
         System.out.print( " is : ");
-        printArray.print(leftRotateArray.leftRotateByOne(arr1));
+        leftRotateArray.leftRotateByOne(arr1);
+        printArray.print(arr1);
 
         System.out.println(" ");
         System.out.print(" Left Rotate by d position of the  array : ");
         printArray.print(arr1);
         System.out.print( " is : ");
-        printArray.print(leftRotateArray.leftRotateByDPos(arr1, 3));
+        leftRotateArray.leftRotateByDPos(arr1, 3);
+        printArray.print(arr1);
 
         System.out.println(" ");
         System.out.print(" Remove Duplicates of the sorted array : ");
         int [] arr2 = {12, 17, 17, 23, 27, 35, 35, 46, 50, 60, 70, 70};
         printArray.print(arr2);
         System.out.print( " is : ");
-        printArray.print(removeDupSortedArray.removeDuplicates(arr2));
+        int newLength = removeDupSortedArray.removeDuplicates(arr2);
+        printArray.print(arr2,newLength);
     }
 }
