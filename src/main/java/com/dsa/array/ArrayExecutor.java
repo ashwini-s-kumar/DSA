@@ -10,6 +10,8 @@ public class ArrayExecutor {
         PascalTriangle pascalTriangle = new PascalTriangle();
         LeftRotateArray leftRotateArray = new LeftRotateArray();
         RemoveDuplicatesSortedArray removeDupSortedArray = new RemoveDuplicatesSortedArray();
+        SecondLargestNumber secondLargestNumber = new SecondLargestNumber();
+        Leader leader = new Leader();
 
         int [] larNum = {3,30,34,5,9};
         System.out.println(" ");
@@ -60,5 +62,16 @@ public class ArrayExecutor {
         System.out.print( " is : ");
         int newLength = removeDupSortedArray.removeDuplicates(arr2);
         printArray.print(arr2,newLength);
+
+        System.out.println(" ");
+        System.out.print(" Second Largest in the given array : ");
+        int [] arr3 = {30, 50, 70, 20, 90, 500, 420,40};
+        printArray.print(arr3);
+        System.out.print( " is : " + secondLargestNumber.secondLargest(arr3));
+
+        System.out.println(" ");
+        System.out.print(" Leaders of  the given array : ");
+        int [] arr4 = {30, 2000, 70, 1000, 90, 500, 420,40};
+        leader.printLeader(arr4);
     }
 }
