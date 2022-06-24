@@ -12,6 +12,10 @@ public class ArrayExecutor {
         RemoveDuplicatesSortedArray removeDupSortedArray = new RemoveDuplicatesSortedArray();
         SecondLargestNumber secondLargestNumber = new SecondLargestNumber();
         Leader leader = new Leader();
+        MaxDifference maxDifference = new MaxDifference();
+        Frequency frequency = new Frequency();
+        StockBuySell stockBuySell = new StockBuySell();
+        Max1sBinaryArray max1sBinaryArray = new Max1sBinaryArray();
 
         int [] larNum = {3,30,34,5,9};
         System.out.println(" ");
@@ -73,5 +77,28 @@ public class ArrayExecutor {
         System.out.print(" Leaders of  the given array : ");
         int [] arr4 = {30, 2000, 70, 1000, 90, 500, 420,40};
         leader.printLeader(arr4);
+
+        System.out.println(" ");
+        System.out.print(" MaxDifference in  of   given array : ");
+        printArray.print(arr4);
+        System.out.print( " is : "+ maxDifference.maxDiff(arr4));
+
+        System.out.println(" ");
+        System.out.print(" Frequency of element in sorted array : ");
+        int [] arr5 = {10,10,10,35,35,60,60,60,60,60,70,80,80};
+        printArray.print(arr5);
+        frequency.freSortedArray(arr5);
+
+        System.out.println(" ");
+        System.out.print(" Trade stocks with the price array : ");
+        int price[] = {100, 180, 260, 310, 40, 535, 695};
+        printArray.print(price);
+        stockBuySell.stock(price);
+
+        System.out.println(" ");
+        System.out.print(" Max 1's in the binary array : ");
+        int [] binary = {1,1,1,0,0,0,1,1,0,1,1,1,1,1,0,1};
+        printArray.print(binary);
+        System.out.print( " is : "+ max1sBinaryArray.max1s(binary));
     }
 }
