@@ -1,5 +1,9 @@
 package com.dsa.array;
 
+import com.dsa.array.kadaneAlgo.LongestEvenOddSubArray;
+import com.dsa.array.kadaneAlgo.MaxCircularSumSubArray;
+import com.dsa.array.kadaneAlgo.MaxSubArraySum;
+import com.dsa.array.mooreVotingAlgo.MajorityElement;
 import com.dsa.array.patterns.PascalTriangle;
 
 public class ArrayExecutor {
@@ -16,6 +20,10 @@ public class ArrayExecutor {
         Frequency frequency = new Frequency();
         StockBuySell stockBuySell = new StockBuySell();
         Max1sBinaryArray max1sBinaryArray = new Max1sBinaryArray();
+        MaxSubArraySum maxSubArraySum = new MaxSubArraySum();
+        LongestEvenOddSubArray longestEvenOddSubArray = new LongestEvenOddSubArray();
+        MaxCircularSumSubArray maxCircularSumSubArray = new MaxCircularSumSubArray();
+        MajorityElement majorityElement = new MajorityElement();
 
         int [] larNum = {3,30,34,5,9};
         System.out.println(" ");
@@ -100,5 +108,29 @@ public class ArrayExecutor {
         int [] binary = {1,1,1,0,0,0,1,1,0,1,1,1,1,1,0,1};
         printArray.print(binary);
         System.out.print( " is : "+ max1sBinaryArray.max1s(binary));
+
+        System.out.println(" ");
+        System.out.print(" Max Sum of subArray in the given array : ");
+        int [] arr6 = {1,2, 3, -7, 8,1};
+        printArray.print(arr6);
+        System.out.print( " is : "+ maxSubArraySum.maxSubArraySum(arr6));
+
+
+        System.out.println(" ");
+        System.out.print(" Longest Even Odd  of subArray in the given array : ");
+        int [] arr7 = {1,2,3,1,4,5,6,7,8,8};
+        printArray.print(arr7);
+        System.out.print( " is : "+ longestEvenOddSubArray.longestEvenOddSubArray(arr7));
+
+        System.out.println(" ");
+        System.out.print(" Max Sum of Circular subArray in the given array : ");
+        printArray.print(arr6);
+        System.out.print( " is : "+ maxCircularSumSubArray.maxCircularSumSubArray(arr6));
+
+        System.out.println(" ");
+        System.out.print(" Majority element in the given array : ");
+        int [] arr8 = { 1, 3, 3, 1, 3};
+        printArray.print(arr8);
+        majorityElement.printMajority(arr8);
     }
 }
