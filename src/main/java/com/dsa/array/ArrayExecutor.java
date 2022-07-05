@@ -26,6 +26,9 @@ public class ArrayExecutor {
         MajorityElement majorityElement = new MajorityElement();
         TrapRainWater trapRainWater = new TrapRainWater();
         MissingNumber missingNumber = new MissingNumber();
+        MoveNegativeToEndOfArray moveNegativeToEndOfArray = new MoveNegativeToEndOfArray();
+        KthSmallest kthSmallest = new KthSmallest();
+        KthLargest kthLargest = new KthLargest();
 
         int [] larNum = {3,30,34,5,9};
         System.out.println(" ");
@@ -148,5 +151,26 @@ public class ArrayExecutor {
         printArray.print(arr10);
         System.out.print(" is : ");
         System.out.print(missingNumber.missingNumber(arr10));
+
+        System.out.println(" ");
+        System.out.print(" move negative numbers in the given array : ");
+        int [] arr11 = { 1, -3, 4, -5 , -100, -8, 7, 10, -23, 18};
+        printArray.print(arr11);
+        System.out.print(" is : ");
+        moveNegativeToEndOfArray.moveNegative(arr11);
+
+        int [] arr12 = { 1, 3, 4, 5 , 100, 8, 7, 10, 23, 18};
+        int k = 7;
+
+        System.out.println(" ");
+        System.out.print(" The " + k+"th move smallest no. in the given array : ");
+        printArray.print(arr12);
+        System.out.print("---> is : " +kthSmallest.kthSmallest(arr12,0,arr12.length-1,k));
+
+        System.out.println(" ");
+        System.out.print(" The " + k+"th move Largest no. in the given array : ");
+        printArray.print(arr12);
+        System.out.print("---> is : " +kthLargest.kthLargest(arr12,0,arr12.length-1,k));
+
     }
 }
