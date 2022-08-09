@@ -29,6 +29,8 @@ public class ArrayExecutor {
         MoveNegativeToEndOfArray moveNegativeToEndOfArray = new MoveNegativeToEndOfArray();
         KthSmallest kthSmallest = new KthSmallest();
         KthLargest kthLargest = new KthLargest();
+        Sort012 sort012 = new Sort012();
+        UnionIntersection unionIntersection = new UnionIntersection();
 
         int [] larNum = {3,30,34,5,9};
         System.out.println(" ");
@@ -85,6 +87,16 @@ public class ArrayExecutor {
         int [] arr3 = {30, 50, 70, 20, 90, 500, 420,40};
         printArray.print(arr3);
         System.out.print( " is : " + secondLargestNumber.secondLargest(arr3));
+
+        System.out.println(" ");
+        System.out.print(" arr2: ");
+        printArray.print(arr2);
+        System.out.print(" arr3: ");
+        printArray.print(arr3);
+        System.out.print(" union :  ");
+        unionIntersection.union(arr2, arr3);
+        System.out.print(" intersection :  ");
+        unionIntersection.intersection(arr2, arr3);
 
         System.out.println(" ");
         System.out.print(" Leaders of  the given array : ");
@@ -171,6 +183,14 @@ public class ArrayExecutor {
         System.out.print(" The " + k+"th move Largest no. in the given array : ");
         printArray.print(arr12);
         System.out.print("---> is : " +kthLargest.kthLargest(arr12,0,arr12.length-1,k));
+
+        System.out.println(" ");
+        System.out.print(" The given array : ");
+        int [] arr13 = { 1, 0, 0, 2, 2, 2, 1, 0, 1, 0, 0, 2, 1, 2};
+        printArray.print(arr13);
+        System.out.print("After sort012 :");
+        sort012.sort012(arr13, arr13.length);
+        printArray.print(arr13);
 
     }
 }
