@@ -1,7 +1,9 @@
-package com.dsa.linkedlist;
+package com.dsa.linkedlist.basic;
+
+import com.dsa.linkedlist.Node;
 
 public class AddNodeAtPos {
-    Node addNodeAtPos(Node head, int data, int pos)
+    public Node addNodeAtPos(Node head, int data, int pos)
     {
         Node newNode = new Node(data);
         if(head == null)

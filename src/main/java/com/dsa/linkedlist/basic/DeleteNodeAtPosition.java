@@ -1,9 +1,11 @@
-package com.dsa.linkedlist;
+package com.dsa.linkedlist.basic;
+
+import com.dsa.linkedlist.Node;
 
 public class DeleteNodeAtPosition {
     // ll = 10 -> 20 -> 30 -> 40
     //pos = 1  -> 2  -> 3  -> 4
-    Node deleteNodeAtPos(Node head, int pos)
+    public Node deleteNodeAtPos(Node head, int pos)
     {
         if(head == null)
             return head;
