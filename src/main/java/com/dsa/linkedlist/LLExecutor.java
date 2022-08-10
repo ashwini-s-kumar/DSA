@@ -1,6 +1,7 @@
 package com.dsa.linkedlist;
 
 import com.dsa.linkedlist.basic.*;
+import com.dsa.linkedlist.operations.ReverseLL;
 
 
 public class LLExecutor {
@@ -13,6 +14,7 @@ public class LLExecutor {
         DeleteNodeAtPosition deleteNodeAtPosition = new DeleteNodeAtPosition();
         DeleteNodeAtHead deleteNodeAtHead = new DeleteNodeAtHead();
         DeleteNodeAtTail deleteNodeAtTail = new DeleteNodeAtTail();
+        ReverseLL reverseLL = new ReverseLL();
 
         Node head = new Node(1);
         head.next = new Node(2);
@@ -77,5 +79,17 @@ public class LLExecutor {
         System.out.println(" ");
         System.out.println("deleteNodeAtTail : ");
         printLinkedList.print(deleteNodeAtTail.deleteNodeAtTail(head));
+
+
+        head = new Node(10);
+        head.next = new Node(20);
+        head.next.next = new Node(30);
+        head.next.next.next = new Node(40);
+        System.out.println(" ");
+        System.out.println("The LL is :");
+        printLinkedList.print(head);
+        System.out.println(" ");
+        System.out.println("reverseLL : ");
+        printLinkedList.print(reverseLL.reverseLL(head));
     }
 }
