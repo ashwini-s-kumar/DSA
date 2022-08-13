@@ -3,18 +3,27 @@ package com.dsa.array;
 import java.util.Random;
 
 public class KthLargest {
-    void swap(int arr[], int l, int r){
-        int tmp = arr[l];
-        arr[l] = arr[r];
-        arr[r] = tmp;
-    }
 
-    int randomPartition(int arr[], int l, int r){
-        int n = r-l+1;
-        Random rd = new Random();
-        int pivot = rd.nextInt(n);
-        swap(arr, l + pivot, r);
-        return partition(arr, l, r);
+    public static int partition(int [] arr, int l, int r)
+    {
+        int x = arr[r], i = l;
+        for (int j = l; j <= r - 1; j++) {
+            if (arr[j] > x) {
+                // Swapping arr[i] and arr[j]
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+
+                i++;
+            }
+        }
+
+        // Swapping arr[i] and arr[r]
+        int temp = arr[i];
+        arr[i] = arr[r];
+        arr[r] = temp;
+
+        return i;
     }
 
     int kthLargest(int arr[], int l, int r, int k)
@@ -23,7 +32,7 @@ public class KthLargest {
         if (k > 0 && k <= r - l + 1)
         {
             // find a position for random partition
-            int pos = randomPartition(arr, l, r);
+            int pos = partition(arr, l, r);
 
             // if this pos gives the kth smallest element, then return
             if (pos-l == k-1)
@@ -38,18 +47,4 @@ public class KthLargest {
         return Integer.MAX_VALUE;
     }
 
-    int partition(int arr[], int l, int r)
-    {
-        int x = arr[r], i = l;
-        for (int j = l; j <= r - 1; j++)
-        {
-            if (arr[j] >= x)
-            {
-                swap(arr, i, j);
-                i++;
-            }
-        }
-        swap(arr, i, r);
-        return i;
-    }
 }
