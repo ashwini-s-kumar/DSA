@@ -79,8 +79,8 @@ public class ArrayExecutor {
         int [] arr2 = {12, 17, 17, 23, 27, 35, 35, 46, 50, 60, 70, 70};
         printArray.print(arr2);
         System.out.print( " is : ");
-        int newLength = removeDupSortedArray.removeDuplicates(arr2);
-        printArray.print(arr2,newLength);
+        int lastIndex = removeDupSortedArray.removeDuplicates(arr2);
+        printArray.print(arr2,lastIndex);
 
         System.out.println(" ");
         System.out.print(" Second Largest in the given array : ");
@@ -128,7 +128,8 @@ public class ArrayExecutor {
 
         System.out.println(" ");
         System.out.print(" Max Sum of subArray in the given array : ");
-        int [] arr6 = {1,2, 3, -7, 8,1};
+       // int [] arr6 = {1,2, 3, -7, 8,1};
+        int [] arr6 = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
         printArray.print(arr6);
         System.out.print( " is : "+ maxSubArraySum.maxSubArraySum(arr6));
 

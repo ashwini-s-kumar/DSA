@@ -3,14 +3,14 @@ package com.dsa.array;
 public class RemoveDuplicatesSortedArray {
     public int  removeDuplicates( int [] arr)
     {
-        int lastChecked = 1;
-        for(int i=0; i<arr.length; i++){
-            if(arr[i] != arr[lastChecked - 1])
+        int sortedIndex = 0;
+        for(int i=1; i<=arr.length-1; i++){
+            if(arr[i] != arr[sortedIndex])
             {
-                arr[lastChecked] = arr[i];
-                lastChecked++;
+                sortedIndex += 1;
+                arr[sortedIndex] = arr[i];
             }
         }
-        return lastChecked+1;
+        return sortedIndex;
     }
 }

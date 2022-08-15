@@ -7,9 +7,9 @@ public class PrintArray {
             System.out.print(i + " ");
         }
     }
-    public void print(int [] arr, int n)
+    public void print(int [] arr, int lastIndex)
     {
-        for (int i=0; i<n-1; i++){
+        for (int i=0; i<=lastIndex; i++){
             System.out.print(arr[i] + " ");
         }
     }

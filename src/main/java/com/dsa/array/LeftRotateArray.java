@@ -18,4 +18,12 @@ public class LeftRotateArray {
         rev.reverseArray(arr, d, arr.length - 1);
         rev.reverseArray(arr, 0, arr.length - 1);
     }
+
+    public void rightRotateByDPos(int [] arr, int d)
+    {
+        ReverseArrayTwoPointer rev = new ReverseArrayTwoPointer();
+        rev.reverseArray(arr, 0, arr.length - 1);
+        rev.reverseArray(arr, 0 , d-1);
+        rev.reverseArray(arr, d, arr.length - 1);
+    }
 }
