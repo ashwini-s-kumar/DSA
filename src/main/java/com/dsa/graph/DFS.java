@@ -6,14 +6,14 @@ public class DFS {
     static int v =7;
     static boolean [] visited = new boolean[v+1];
 
-    public static void printDFS(ArrayList<ArrayList<Integer>>adj,int v, int s)
+    public static void printDFS(ArrayList<ArrayList<Integer>>adj, int s)
     {
         visited[s] = true;
         System.out.print(s + " ");
         for(int i : adj.get(s))
         {
             if(visited[i] == false)
-                printDFS(adj , v , i);
+                printDFS(adj ,i);
         }
     }
     public static void main(String [] arrs)
@@ -36,6 +36,6 @@ public class DFS {
         AdjacentListGraph.insertEdge(adj, 4, 6);
         AdjacentListGraph.insertEdge(adj, 5, 6);
         System.out.println(adj.toString());
-        printDFS(adj, 7, 5);
+        printDFS(adj,5);
     }
 }
