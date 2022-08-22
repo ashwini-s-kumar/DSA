@@ -54,4 +54,16 @@ public class BinaryTree {
         root.left.right.right = new Node(8);
         return root;
     }
+
+    public static  NodeHD getSimpleBinaryBTwithHD()
+    {
+        NodeHD root = new NodeHD(10);
+        root.left = new NodeHD(2);
+        root.right = new NodeHD(15);
+        root.left.left = new NodeHD(4);
+        root.left.right = new NodeHD(5);
+        root.right.left = new NodeHD(6);
+        root.right.right = new NodeHD(7);
+        return root;
+    }
 }

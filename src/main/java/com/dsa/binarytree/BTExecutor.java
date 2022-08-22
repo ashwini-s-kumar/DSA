@@ -22,6 +22,7 @@ public class BTExecutor {
     public static void main(String [] arr)
     {
         Node simpleBinaryBT = BinaryTree.getSimpleBinaryBT();
+        NodeHD simpleBinaryBTWithHD = BinaryTree.getSimpleBinaryBTwithHD();
 
         System.out.println("");
         System.out.println("inOrder traversal of simpleBinaryBT:");
@@ -163,5 +164,13 @@ public class BTExecutor {
         System.out.println(" ");
         System.out.println("clockWiseView of  simpleBinaryBT :");
         ClockWiseView.clockWiseView(simpleBinaryBT);
+
+        System.out.println(" ");
+        System.out.println("Bottom View of  simpleBinaryBT :");
+        BottomView.bottomView(simpleBinaryBTWithHD);
+
+        System.out.println(" ");
+        System.out.println("Bottom View of  simpleBinaryBT :");
+        TopView.topView(simpleBinaryBTWithHD);
     }
 }
