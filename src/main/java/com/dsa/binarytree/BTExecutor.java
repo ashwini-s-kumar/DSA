@@ -172,5 +172,9 @@ public class BTExecutor {
         System.out.println(" ");
         System.out.println("Bottom View of  simpleBinaryBT :");
         TopView.topView(simpleBinaryBTWithHD);
+
+        System.out.println(" ");
+        System.out.println("Vertical View of  simpleBinaryBT :");
+        VerticalView.verticalView(simpleBinaryBTWithHD);
     }
 }

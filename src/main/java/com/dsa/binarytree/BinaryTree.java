@@ -57,6 +57,11 @@ public class BinaryTree {
 
     public static  NodeHD getSimpleBinaryBTwithHD()
     {
+        /*
+                           10
+                       2       15
+                     4    5  6     7
+         */
         NodeHD root = new NodeHD(10);
         root.left = new NodeHD(2);
         root.right = new NodeHD(15);
