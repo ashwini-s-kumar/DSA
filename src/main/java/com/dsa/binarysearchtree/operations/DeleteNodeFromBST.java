@@ -22,12 +22,12 @@ public class DeleteNodeFromBST {
         else if(key > root.data)
             root.right = deleteNodeFromBST(root.right , key);
         else {//key == root.data
-            if (root.left == null)
+            if (root.left == null) // one child
                 return root.right;
-            else if (root.right == null)
+            else if (root.right == null) // one child
                 return root.left;
             else {
-                Node succ = getSuccessor(root);
+                Node succ = getSuccessor(root); // two childs
                 root.data = succ.data;
                 root.right = deleteNodeFromBST(root.right, succ.data);
             }
