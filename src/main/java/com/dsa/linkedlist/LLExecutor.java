@@ -177,6 +177,27 @@ public class LLExecutor {
         System.out.println("The mergeTwoSortedLL is :");
         printLinkedList.print(mergeTwoSortedLL.mergeSortedLL(head, head1));
 
+        head = new Node(10);
+        head.next = new Node(20);
+        head.next.next = new Node(30);
+        head.next.next.next = new Node(40);
+        head.next.next.next.next = new Node(50);
+
+        head1 = new Node(5);
+        head1.next = new Node(15);
+        head1.next.next = new Node(34);
+        head1.next.next.next = new Node(60);
+        head1.next.next.next.next = new Node(70);
+        System.out.println(" ");
+        System.out.println("The LL is :");
+        printLinkedList.print(head);
+        System.out.println(" ");
+        System.out.println("The LL is :");
+        printLinkedList.print(head1);
+        System.out.println(" ");
+        System.out.println("The mergeTwoSortedLLRecursion is :");
+        printLinkedList.print(mergeTwoSortedLL.mergeTwoSortedLLRecursion(head, head1));
+
 
         head = new Node(10);
         head.next = new Node(20);

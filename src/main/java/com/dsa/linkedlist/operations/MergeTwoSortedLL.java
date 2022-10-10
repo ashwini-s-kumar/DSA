@@ -41,4 +41,26 @@ public class MergeTwoSortedLL {
             tail.next = head1;
         return head;
     }
+    public Node mergeTwoSortedLLRecursion(Node a , Node b)
+    {
+        Node result = null;
+        /* Base cases */
+        if (a == null)
+            return b;
+        else if (b == null)
+            return a;
+
+        /* Pick either a or b, and recur */
+        if (a.data <= b.data) {
+            result = a;
+            result.next = mergeTwoSortedLLRecursion(a.next, b);
+        }
+        else {
+            result = b;
+            result.next = mergeTwoSortedLLRecursion(a, b.next);
+        }
+
+        return result;
+    }
+
 }
