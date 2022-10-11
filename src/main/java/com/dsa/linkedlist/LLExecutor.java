@@ -25,6 +25,7 @@ public class LLExecutor {
         ReverseInGroupK reverseInGroupK = new ReverseInGroupK();
         FloydCycleDetectionLL floydCycleDetectionLL = new FloydCycleDetectionLL();
         RemoveLoopLL removeLoopLL = new RemoveLoopLL();
+        MergeKSortedLL mergeKSortedLL = new MergeKSortedLL();
 
         Node head = new Node(1);
         head.next = new Node(2);
@@ -235,5 +236,39 @@ public class LLExecutor {
         System.out.println(" ");
         System.out.println("The removeLoopLL is :" );
         printLinkedList.print(removeLoopLL.removeLoo(head));
+
+
+        System.out.println(" ");
+        int k = 3; // Number of linked lists
+        int n = 4; // Number of elements in each list
+
+        // an array of pointers storing the head nodes
+        // of the linked lists
+        Node array[] = new Node[k];
+
+        array[0] = new Node(1);
+        array[0].next = new Node(3);
+        array[0].next.next = new Node(5);
+        array[0].next.next.next = new Node(7);
+
+        array[1] = new Node(2);
+        array[1].next = new Node(4);
+        array[1].next.next = new Node(6);
+        array[1].next.next.next = new Node(8);
+
+        array[2] = new Node(0);
+        array[2].next = new Node(9);
+        array[2].next.next = new Node(10);
+        array[2].next.next.next = new Node(11);
+        System.out.println("The  array of LL is :");
+        printLinkedList.print(array[0]);
+        System.out.println(" ");
+        printLinkedList.print(array[1]);
+        System.out.println(" ");
+        printLinkedList.print(array[2]);
+        // Merge all lists
+        Node head4 = mergeKSortedLL.mergeKLists(array, k - 1);
+        System.out.println("The  merge of k sorted LL is :");
+        printLinkedList.print(head4);
     }
 }
