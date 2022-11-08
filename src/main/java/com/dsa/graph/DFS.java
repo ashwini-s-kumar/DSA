@@ -36,6 +36,6 @@ public class DFS {
         AdjacentListGraph.insertEdge(adj, 4, 6);
         AdjacentListGraph.insertEdge(adj, 5, 6);
         System.out.println(adj.toString());
-        printDFS(adj,5);
+        printDFS(adj,0);
     }
 }

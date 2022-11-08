@@ -1,30 +1,42 @@
-package com.dsa.graph;
+package com.dsa.graph.bfsproblems;
+
+import com.dsa.graph.AdjacentListGraph;
+import com.dsa.graph.BFS;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Queue;
 
-public class BFS {
-    public static void printBFS(ArrayList<ArrayList<Integer>>adj,int v, int s)
+public class ShortestPath {
+    static void printDistance(ArrayList<ArrayList<Integer>> adj, int v, int source)
     {
-        boolean [] visited = new boolean[v+1];
-        Queue<Integer> q = new ArrayDeque<>();
-        q.add(s);
-        visited[s] = true;
+        Queue<Integer> q = new ArrayDeque();
+        boolean  [] visited = new boolean[v+1];
+        int [] dist = new int[v+1];
+
+        q.add(source);
+        dist[source] = 0;
+        visited[source] = true;
+
         while(!q.isEmpty())
         {
             int cur = q.poll();
-            System.out.print(cur +" ");
+            System.out.print(" " + cur +"-"+dist[cur]+" ");
+
             for(int x : adj.get(cur))
             {
                 if(visited[x] == false)
                 {
-                    q.add(x);
+                    dist[x] = dist[cur] + 1;
                     visited[x] = true;
+                    q.add(x);
                 }
             }
+
         }
+        System.out.println(" ");
     }
+
     public static void main(String [] arrs)
     {
         int  v = 7;
@@ -42,8 +54,8 @@ public class BFS {
         AdjacentListGraph.insertEdge(adj, 4, 6);
         AdjacentListGraph.insertEdge(adj, 5, 6);
         System.out.println(adj.toString());
-        printBFS(adj, 7, 0);
-
+        System.out.println(" ");
+        printDistance(adj, 7, 0);
 
     }
 }
