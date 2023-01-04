@@ -9,6 +9,11 @@ public class AdjacentListGraph {
         adj.get(v).add(u);
     }
 
+    public static void insertEdgeDAG(ArrayList<ArrayList<Integer>> adj, int v, int u)
+    {
+        adj.get(v).add(u);
+    }
+
     public static void main(String [] arrs)
     {
         int v = 4;
