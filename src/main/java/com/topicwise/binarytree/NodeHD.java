@@ -10,6 +10,7 @@ public class NodeHD {
         this.data = data;
         this.left = null;
         this.right = null;
+        //horizontal distance
         this.hd = Integer.MAX_VALUE;
     }
 }

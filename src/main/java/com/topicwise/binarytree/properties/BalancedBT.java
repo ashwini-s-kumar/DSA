@@ -11,7 +11,7 @@ public class BalancedBT {
     {
         if(root == null)
             return true;
-        int lH= HeightBt.heightBt(root.left);
+        int lH = HeightBt.heightBt(root.left);
         int rH = HeightBt.heightBt(root.right);
         if(Math.abs(lH-rH)<=1 && isBalancedBT(root.left) && isBalancedBT(root.right))
             return true;
