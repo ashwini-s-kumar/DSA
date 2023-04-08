@@ -5,6 +5,9 @@ import com.topicwise.array.kadaneAlgo.MaxCircularSumSubArray;
 import com.topicwise.array.kadaneAlgo.MaxSubArraySum;
 import com.topicwise.array.mooreVotingAlgo.MajorityElement;
 import com.topicwise.array.patterns.PascalTriangle;
+import com.topicwise.array.slidingWindow.CheckSubArrWithGivenSum;
+import com.topicwise.array.slidingWindow.DistinctElementInEveryWindow;
+import com.topicwise.array.slidingWindow.MaxSumOfKConsecutiveElements;
 
 public class ArrayExecutor {
     public static void main(String [] arr)
@@ -19,7 +22,7 @@ public class ArrayExecutor {
         MaxDifference maxDifference = new MaxDifference();
         Frequency frequency = new Frequency();
         StockBuySell stockBuySell = new StockBuySell();
-        Max1sBinaryArray max1sBinaryArray = new Max1sBinaryArray();
+        MaxConsecutive1sBinaryArray max1sBinaryArray = new MaxConsecutive1sBinaryArray();
         MaxSubArraySum maxSubArraySum = new MaxSubArraySum();
         LongestEvenOddSubArray longestEvenOddSubArray = new LongestEvenOddSubArray();
         MaxCircularSumSubArray maxCircularSumSubArray = new MaxCircularSumSubArray();
@@ -31,6 +34,10 @@ public class ArrayExecutor {
         KthLargest kthLargest = new KthLargest();
         Sort012 sort012 = new Sort012();
         UnionIntersection unionIntersection = new UnionIntersection();
+        MinConsecutiveFlips minConsecutiveFlips = new MinConsecutiveFlips();
+        MaxSumOfKConsecutiveElements maxSumOfKConsecutiveElements = new MaxSumOfKConsecutiveElements();
+        CheckSubArrWithGivenSum checkSubArrWithGivenSum = new CheckSubArrWithGivenSum();
+        DistinctElementInEveryWindow distinctElementInEveryWindow = new DistinctElementInEveryWindow();
 
         int [] larNum = {3,30,34,5,9};
         System.out.println(" ");
@@ -54,7 +61,7 @@ public class ArrayExecutor {
 
         System.out.println(" ");
         System.out.print(" Reverse of the  array : ");
-        int [] arr1 = {100, 90, 80, 70, 60, 50};
+        int [] arr1 = {100, 90, 80, 70, 60, 50, 40};
         printArray.print(arr1);
         System.out.print( " is : ");
         rev.reverseArray(arr1, 0, arr1.length-1);
@@ -192,6 +199,29 @@ public class ArrayExecutor {
         System.out.print("After sort012 :");
         sort012.sort012(arr13, arr13.length);
         printArray.print(arr13);
+
+        System.out.println(" ");
+        System.out.print(" The given array : ");
+        int [] arr14 = { 1, 1, 0, 0, 0, 1,1,0};
+        printArray.print(arr14);
+        minConsecutiveFlips.makeAllElementsSame(arr14);
+
+        System.out.println(" ");
+        System.out.print(" The given array : ");
+        int [] arr15 = {1, 4, 20, 3, 10, 5};
+        printArray.print(arr15);
+        maxSumOfKConsecutiveElements.maxSum(arr15, 3);
+
+        System.out.println(" ");
+        System.out.print(" The given array : ");
+        printArray.print(arr15);
+        checkSubArrWithGivenSum.checkSubArrayExist(arr15, 33);
+
+        System.out.println(" ");
+        System.out.print(" The given array : ");
+        int [] arr16 = {1, 1, 1, 3, 4, 2, 3};
+        printArray.print(arr16);
+        distinctElementInEveryWindow.distinct(arr16, 4);
 
     }
 }
