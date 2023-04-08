@@ -1,10 +1,10 @@
-package com.topicwise.array;
+package com.topicwise.hashing.easy;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class UnionIntersection {
-    void union(int [] arr1, int [] arr2)
+public class UnionIntersectionOfArr {
+    private static void union(int [] arr1, int [] arr2)
     {
         Set<Integer> s = new HashSet<>();
         for(int i =0; i< arr1.length; i++)
@@ -18,7 +18,7 @@ public class UnionIntersection {
         System.out.println(s);
     }
 
-    void intersection(int [] arr1, int [] arr2)
+    private static void intersection(int [] arr1, int [] arr2)
     {
         Set<Integer> s = new HashSet<>();
         for(int i =0; i< arr1.length; i++)
@@ -30,5 +30,13 @@ public class UnionIntersection {
             if(s.contains(arr2[i]))
                 System.out.print(arr2[i] + " ");
         }
+    }
+
+    public static void main(String [] arr){
+        int [] arr1 = {10,20,10,30,20};
+        int [] arr2 = {20,10,10,40};
+
+        union(arr1, arr2);
+        intersection(arr1, arr2);
     }
 }
