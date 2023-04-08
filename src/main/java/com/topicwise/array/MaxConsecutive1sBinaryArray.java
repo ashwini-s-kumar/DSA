@@ -1,6 +1,7 @@
 package com.topicwise.array;
 
-public class Max1sBinaryArray {
+public class MaxConsecutive1sBinaryArray {
+    // max continious 1's
     public int max1s(int [] a)
     {
         int max = 0, cur_max = 0;

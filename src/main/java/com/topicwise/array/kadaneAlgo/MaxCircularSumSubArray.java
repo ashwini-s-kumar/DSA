@@ -15,10 +15,10 @@ public class MaxCircularSumSubArray {
             sum += arr[i];
             arr[i] = arr[i] * -1;
         }
-        int maxCircularArray = maxSubArraySum.maxSubArraySum(arr);
-        if(maxCircularArray + sum == 0)
+        int maxInverseArray = maxSubArraySum.maxSubArraySum(arr);
+        if(maxInverseArray + sum == 0)
             return maxNormalArray;
         else
-            return Arithmetics.max(maxNormalArray, maxCircularArray + sum);
+            return Arithmetics.max(maxNormalArray, maxInverseArray + sum);
     }
 }

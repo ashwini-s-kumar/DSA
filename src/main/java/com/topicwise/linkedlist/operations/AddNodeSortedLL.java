@@ -17,7 +17,6 @@ public class AddNodeSortedLL {
             if (cur.next != null && cur.next.data <= x)
             {
                 cur = cur.next;
-                continue;
             }
             else{
                 newNode.next = cur.next;
