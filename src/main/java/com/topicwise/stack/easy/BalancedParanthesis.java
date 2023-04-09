@@ -5,7 +5,7 @@ import java.util.Deque;
 
 public class BalancedParanthesis {
 
-    Boolean isBalanced(String str)
+    public Boolean isBalanced(String str)
     {
         Deque<Character> stack = new ArrayDeque<>();
         for(int i = 0; i < str.length(); i++)

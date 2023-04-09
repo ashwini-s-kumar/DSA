@@ -19,7 +19,7 @@ public class LinearProbing {
 
     public void insert(int key){
         int hash = hash(key);
-        while(table[hash] != -1 && table[hash] != -1 && table[hash] != key){
+        while(table[hash] != -1 && table[hash] != -2 && table[hash] != key){
             hash = (hash +1) % capacity;
         }
         if(table[hash] == key){
@@ -32,38 +32,31 @@ public class LinearProbing {
     }
 
     public void remove(int key){
-        int hash1 = hash(key);
-        while(table[hash1] != -1){
-            if(table[hash1] == key){
-                table[hash1] = -2;
+        int hash = hash(key);
+        while(table[hash] != -1){
+            if(table[hash] == key){
+                table[hash] = -2;
                 System.out.println("Successfully removed key : "+ key);
                 size --;
-            }
-            int hash2 = (hash1  + 1) % capacity;
-            if(hash2 == hash1){
-                System.out.println("Failed to remove Key : "+ key);
                 return;
             }
+            hash = (hash + 1) % capacity;
         }
     }
 
     public boolean search(int key){
-        int hash1 = hash(key);
-        int hash2 = hash1;
-        while(table[hash1] != -1){
-            if(table[hash1] == key){
+        int hash = hash(key);
+        while(table[hash] != -1){
+            if(table[hash] == key){
                 return true;
             }
-            hash2 = (hash2  + 1) % capacity;
-            if(hash2 == hash1){
-                return false;
-            }
+            hash = (hash + 1) % capacity;
         }
         return false;
     }
 
     public void print(){
-        for(int i = 0 ; i < size; i++){
+        for(int i = 0 ; i < table.length; i++){
             System.out.print(" " + table[i] + " ");
         }
         System.out.println(" ");
@@ -71,6 +64,7 @@ public class LinearProbing {
     public static void main(String [] arr)
     {
         LinearProbing linearProbing = new LinearProbing(7);
+        linearProbing.print();
         linearProbing.insert(30);
         linearProbing.insert(80);
         linearProbing.print();
@@ -86,7 +80,7 @@ public class LinearProbing {
         linearProbing.print();
 
         System.out.println(linearProbing.search(14));
-        System.out.println(linearProbing.search(80));
+        System.out.println(linearProbing.search(31));
         System.out.println(linearProbing.search(67));
 
         linearProbing.remove(15);
