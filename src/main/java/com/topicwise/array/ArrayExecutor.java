@@ -8,6 +8,7 @@ import com.topicwise.array.patterns.PascalTriangle;
 import com.topicwise.array.slidingWindow.CheckSubArrWithGivenSum;
 import com.topicwise.array.slidingWindow.DistinctElementInEveryWindow;
 import com.topicwise.array.slidingWindow.MaxSumOfKConsecutiveElements;
+import com.topicwise.hashing.easy.UnionIntersectionOfArr;
 
 public class ArrayExecutor {
     public static void main(String [] arr)
@@ -33,7 +34,7 @@ public class ArrayExecutor {
         KthSmallest kthSmallest = new KthSmallest();
         KthLargest kthLargest = new KthLargest();
         Sort012 sort012 = new Sort012();
-        UnionIntersection unionIntersection = new UnionIntersection();
+        UnionIntersectionOfArr unionIntersection = new UnionIntersectionOfArr();
         MinConsecutiveFlips minConsecutiveFlips = new MinConsecutiveFlips();
         MaxSumOfKConsecutiveElements maxSumOfKConsecutiveElements = new MaxSumOfKConsecutiveElements();
         CheckSubArrWithGivenSum checkSubArrWithGivenSum = new CheckSubArrWithGivenSum();
@@ -94,16 +95,6 @@ public class ArrayExecutor {
         int [] arr3 = {30, 50, 70, 20, 90, 500, 420,40};
         printArray.print(arr3);
         System.out.print( " is : " + secondLargestNumber.secondLargest(arr3));
-
-        System.out.println(" ");
-        System.out.print(" arr2: ");
-        printArray.print(arr2);
-        System.out.print(" arr3: ");
-        printArray.print(arr3);
-        System.out.print(" union :  ");
-        unionIntersection.union(arr2, arr3);
-        System.out.print(" intersection :  ");
-        unionIntersection.intersection(arr2, arr3);
 
         System.out.println(" ");
         System.out.print(" Leaders of  the given array : ");
