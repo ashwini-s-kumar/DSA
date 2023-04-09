@@ -1,5 +1,7 @@
 package com.topicwise.stack;
 
+import com.topicwise.stack.easy.BalancedParanthesis;
+
 public class StackExecutor {
     public static void main(String [] arr)
     {

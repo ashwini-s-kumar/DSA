@@ -3,13 +3,13 @@ package com.topicwise.binarysearchtree;
  *
  * @author ashwini.s
  */
-import com.topicwise.binarysearchtree.operations.DeleteNodeFromBST;
-import com.topicwise.binarysearchtree.operations.InsertIntoBST;
-import com.topicwise.binarysearchtree.operations.SearchBST;
-import com.topicwise.binarysearchtree.properties.BSTCeil;
-import com.topicwise.binarysearchtree.properties.BSTFloor;
+import com.topicwise.binarysearchtree.easy.operations.DeleteNodeFromBST;
+import com.topicwise.binarysearchtree.easy.operations.InsertIntoBST;
+import com.topicwise.binarysearchtree.easy.operations.SearchBST;
+import com.topicwise.binarysearchtree.easy.properties.BSTCeil;
+import com.topicwise.binarysearchtree.easy.properties.BSTFloor;
 import com.topicwise.binarytree.Node;
-import com.topicwise.binarytree.traversals.LevelOrderLineWise;
+import com.topicwise.binarytree.easy.traversals.LevelOrderLineWise;
 
 public class BSTExecutor {
     public static void main(String [] arr)

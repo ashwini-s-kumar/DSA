@@ -1,9 +1,9 @@
 package com.topicwise.linkedlist;
 
-import com.topicwise.linkedlist.basic.*;
-import com.topicwise.linkedlist.operations.*;
-import com.topicwise.linkedlist.properties.FloydCycleDetectionLL;
-import com.topicwise.linkedlist.properties.RemoveLoopLL;
+import com.topicwise.linkedlist.easy.basic.*;
+import com.topicwise.linkedlist.easy.operations.*;
+import com.topicwise.linkedlist.medium.properties.FloydCycleDetectionLL;
+import com.topicwise.linkedlist.medium.properties.RemoveLoopLL;
 
 
 public class LLExecutor {

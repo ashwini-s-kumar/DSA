@@ -1,5 +1,8 @@
 package com.topicwise.heap;
 
+import com.topicwise.heap.difficult.MedianOfStream;
+import com.topicwise.heap.easy.PurchaseMaxItems;
+
 public class HeapExecutor {
     public static void main(String [] arr)
     {

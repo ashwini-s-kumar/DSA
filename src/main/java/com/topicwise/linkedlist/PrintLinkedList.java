@@ -3,7 +3,7 @@ package com.topicwise.linkedlist;
 import java.util.Stack;
 
 public class PrintLinkedList {
-    void print(Node head)
+    public void print(Node head)
     {
         Node cur = head;
         while(cur != null)
@@ -13,7 +13,7 @@ public class PrintLinkedList {
         }
     }
 
-    void printReverse(Node head)
+    public void printReverse(Node head)
     {
         if(head == null)
             return;

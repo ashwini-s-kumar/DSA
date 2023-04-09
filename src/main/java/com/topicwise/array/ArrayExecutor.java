@@ -1,13 +1,18 @@
 package com.topicwise.array;
 
-import com.topicwise.array.kadaneAlgo.LongestEvenOddSubArray;
-import com.topicwise.array.kadaneAlgo.MaxCircularSumSubArray;
-import com.topicwise.array.kadaneAlgo.MaxSubArraySum;
-import com.topicwise.array.mooreVotingAlgo.MajorityElement;
-import com.topicwise.array.patterns.PascalTriangle;
-import com.topicwise.array.slidingWindow.CheckSubArrWithGivenSum;
-import com.topicwise.array.slidingWindow.DistinctElementInEveryWindow;
-import com.topicwise.array.slidingWindow.MaxSumOfKConsecutiveElements;
+import com.topicwise.array.difficult.KthLargest;
+import com.topicwise.array.difficult.KthSmallest;
+import com.topicwise.array.difficult.StockBuySell;
+import com.topicwise.array.difficult.TrapRainWater;
+import com.topicwise.array.easy.*;
+import com.topicwise.array.medium.kadaneAlgo.LongestEvenOddSubArray;
+import com.topicwise.array.medium.kadaneAlgo.MaxCircularSumSubArray;
+import com.topicwise.array.medium.kadaneAlgo.MaxSubArraySum;
+import com.topicwise.array.medium.mooreVotingAlgo.MajorityElement;
+import com.topicwise.array.medium.patterns.PascalTriangle;
+import com.topicwise.array.medium.slidingWindow.CheckSubArrWithGivenSum;
+import com.topicwise.array.medium.slidingWindow.DistinctElementInEveryWindow;
+import com.topicwise.array.medium.slidingWindow.MaxSumOfKConsecutiveElements;
 import com.topicwise.hashing.easy.UnionIntersectionOfArr;
 
 public class ArrayExecutor {

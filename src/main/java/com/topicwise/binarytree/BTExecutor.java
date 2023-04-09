@@ -1,15 +1,18 @@
 package com.topicwise.binarytree;
 
 import com.topicwise.binarysearchtree.BinarySearchTree;
-import com.topicwise.binarytree.convert.BinaryTreeToDLL;
-import com.topicwise.binarytree.convert.DeserializePerOrderApproach;
-import com.topicwise.binarytree.convert.SerializePreOrderApproach;
-import com.topicwise.binarytree.operations.BurnBTFromLeaf;
-import com.topicwise.binarytree.operations.BurnBTFromTargetNode;
+import com.topicwise.binarytree.difficult.convert.BinaryTreeToDLL;
+import com.topicwise.binarytree.difficult.convert.DeserializePerOrderApproach;
+import com.topicwise.binarytree.difficult.convert.SerializePreOrderApproach;
+import com.topicwise.binarytree.easy.properties.*;
+import com.topicwise.binarytree.easy.traversals.*;
+import com.topicwise.binarytree.easy.views.*;
+import com.topicwise.binarytree.difficult.operations.BurnBTFromLeaf;
+import com.topicwise.binarytree.difficult.operations.BurnBTFromTargetNode;
 import com.topicwise.binarytree.views.*;
 import com.topicwise.binarytree.properties.*;
 import com.topicwise.binarytree.traversals.*;
-import com.topicwise.binarytree.convert.ContructBT;
+import com.topicwise.binarytree.difficult.convert.ContructBT;
 
 import java.util.ArrayList;
 import java.util.Arrays;
