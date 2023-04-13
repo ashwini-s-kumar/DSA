@@ -1,10 +1,12 @@
 package com.topicwise.linkedlist.easy.operations;
 
 import com.topicwise.linkedlist.Node;
+import com.topicwise.linkedlist.PrintLinkedList;
+
 // 5 -> 15 -> 25 -> 35
 //10 -> 20 -> 30 -> 40
 public class MergeTwoSortedLL {
-    public Node mergeSortedLL(Node head1, Node head2)
+    public static Node mergeSortedLL(Node head1, Node head2)
     {
         if(head1 == null )
             return head2;
@@ -61,6 +63,31 @@ public class MergeTwoSortedLL {
         }
 
         return result;
+    }
+
+    public static void main(String [] arr){
+        Node head = new Node(10);
+        head.next = new Node(20);
+        head.next.next = new Node(30);
+        head.next.next.next = new Node(40);
+        head.next.next.next.next = new Node(50);
+
+        Node head1 = new Node(5);
+        head1.next = new Node(15);
+        head1.next.next = new Node(34);
+        head1.next.next.next = new Node(60);
+        head1.next.next.next.next = new Node(70);
+
+        System.out.println(" ");
+        System.out.println("The LL is :");
+        PrintLinkedList.print(head);
+        System.out.println(" ");
+        System.out.println("The LL is :");
+        PrintLinkedList.print(head1);
+        System.out.println(" ");
+        System.out.println("The mergeTwoSortedLL is :");
+        PrintLinkedList.print(mergeSortedLL(head, head1));
+
     }
 
 }

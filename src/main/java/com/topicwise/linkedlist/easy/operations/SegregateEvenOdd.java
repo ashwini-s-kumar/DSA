@@ -1,9 +1,10 @@
 package com.topicwise.linkedlist.easy.operations;
 
 import com.topicwise.linkedlist.Node;
+import com.topicwise.linkedlist.PrintLinkedList;
 
 public class SegregateEvenOdd {
-    public Node segregateEvenOdd(Node head)
+    public static Node segregateEvenOdd(Node head)
     {
         if(head == null)
             return head;
@@ -30,5 +31,19 @@ public class SegregateEvenOdd {
         }
         ee.next = os;
         return es;
+    }
+    public static void main(String [] arr){
+        Node head = new Node(10);
+        head.next = new Node(20);
+        head.next.next = new Node(3);
+        head.next.next.next = new Node(40);
+        head.next.next.next.next = new Node(5);
+
+        System.out.println("The LL is :");
+        PrintLinkedList.print(head);
+        System.out.println(" ");
+        System.out.println("The segregateEvenOdd is :");
+        PrintLinkedList.print(segregateEvenOdd(head));
+
     }
 }
