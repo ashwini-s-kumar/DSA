@@ -11,6 +11,18 @@ public class PrintLinkedList {
             System.out.print(" " + cur.data);
             cur = cur.next;
         }
+        System.out.println("");
+    }
+
+    public static void print(LruNode head)
+    {
+        LruNode cur = head;
+        while(cur != null)
+        {
+            System.out.print(" " + cur.val);
+            cur = cur.next;
+        }
+        System.out.println("");
     }
 
     public void printReverse(Node head)
