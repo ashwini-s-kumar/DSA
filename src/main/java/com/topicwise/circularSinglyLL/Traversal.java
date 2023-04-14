@@ -1,4 +1,4 @@
-package com.topicwise.circularSinglyLL.easy;
+package com.topicwise.circularSinglyLL;
 
 import com.topicwise.linkedlist.Node;
 

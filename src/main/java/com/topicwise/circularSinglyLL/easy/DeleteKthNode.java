@@ -1,5 +1,6 @@
 package com.topicwise.circularSinglyLL.easy;
 
+import com.topicwise.circularSinglyLL.Traversal;
 import com.topicwise.linkedlist.Node;
 
 // 1 -> 2 -> 3
