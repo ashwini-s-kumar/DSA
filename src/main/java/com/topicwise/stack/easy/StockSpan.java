@@ -12,7 +12,7 @@ span :
 
  */
 public class StockSpan {
-    void printSpan(int [] arr)
+    static void printSpan(int [] arr)
     {
         Deque<Integer> stack = new ArrayDeque<>();
         System.out.print("The span = " + 1);
@@ -26,5 +26,10 @@ public class StockSpan {
             System.out.print(" " + span);
             stack.add(i);
         }
+    }
+
+    public static void main(String [] arr){
+        int [] array = {60, 10, 20, 40, 35, 30, 50, 70, 65};
+        printSpan(array);
     }
 }

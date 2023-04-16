@@ -1,0 +1,33 @@
+package com.topicwise.stack.difficult;
+
+import java.util.Stack;
+
+public class MaxRectAreaHistogram {
+    public int maxArea(int [] arr){
+        int area = 0, maxArea = 0;
+        Stack<Integer> stack = new Stack<>();
+
+        for(int i = 0; i < arr.length; i++){
+
+            while (!stack.isEmpty() && arr[stack.peek()] >= arr[i]){
+                int topElement = stack.pop();
+                area = arr[topElement] * (stack.isEmpty() ? i : i - stack.peek() - 1);
+                maxArea = Math.max(maxArea, area);
+            }
+            stack.push(i);
+        }
+        while (!stack.isEmpty()){
+            int topElement = stack.pop();
+            area = arr[topElement] * (stack.isEmpty() ? arr.length : arr.length - stack.peek() - 1);
+            maxArea = Math.max(maxArea, area);
+        }
+        System.out.println("The max area of Rectangular histogram : " + maxArea);
+        return maxArea;
+    }
+
+    public static void main(String [] arr){
+        int [] array = {6,2,5,4,1,5,6};
+        MaxRectAreaHistogram histogram = new MaxRectAreaHistogram();
+        histogram.maxArea(array);
+    }
+}
