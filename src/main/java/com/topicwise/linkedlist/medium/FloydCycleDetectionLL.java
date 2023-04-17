@@ -1,10 +1,9 @@
-package com.topicwise.linkedlist.medium.properties;
+package com.topicwise.linkedlist.medium;
 
 import com.topicwise.linkedlist.Node;
-import com.topicwise.linkedlist.PrintLinkedList;
 
-public class RemoveLoopLL {
-    public static Node removeLoop(Node head)
+public class FloydCycleDetectionLL {
+    public static boolean loopDetection(Node head)
     {
         Node slow = head, fast = head;
         while(fast != null && fast.next != null)
@@ -12,18 +11,9 @@ public class RemoveLoopLL {
             slow = slow.next;
             fast = fast.next.next;
             if(slow == fast)
-                break;
+                return true;
         }
-        if(slow != fast)
-            return head;
-        slow = head;
-        while(slow.next != fast.next)
-        {
-            slow = slow.next;
-            fast = fast.next;
-        }
-        fast.next = null;
-        return head;
+        return false;
     }
     public static void main(String [] arr){
         Node head = new Node(10);
@@ -33,7 +23,7 @@ public class RemoveLoopLL {
         head.next.next.next.next = new Node(5);
         head.next.next.next.next.next = head.next;
 
-        System.out.println("The removeLoopLL is :" );
-        PrintLinkedList.print(removeLoop(head));
+        System.out.println("The floydCycleDetectionLL is :" + loopDetection(head));
+
     }
 }

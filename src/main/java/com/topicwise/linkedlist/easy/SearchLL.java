@@ -1,4 +1,4 @@
-package com.topicwise.linkedlist.easy.operations;
+package com.topicwise.linkedlist.easy;
 
 import com.topicwise.linkedlist.Node;
 import com.topicwise.linkedlist.PrintLinkedList;
