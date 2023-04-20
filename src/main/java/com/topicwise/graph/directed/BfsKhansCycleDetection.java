@@ -1,4 +1,4 @@
-package com.topicwise.graph.difficult.bfsproblems.khansalgorithms;
+package com.topicwise.graph.directed;
 
 import com.topicwise.graph.AdjacentListGraph;
 
@@ -6,7 +6,7 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Queue;
 
-public class CycleDetectionDirectedGraph {
+public class BfsKhansCycleDetection {
     public static void detectCycleDAG(ArrayList<ArrayList<Integer>> adjList, int v)
     {
         int [] indegree = new int[v];

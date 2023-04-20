@@ -1,4 +1,4 @@
-package com.topicwise.graph.difficult.dfsproblems;
+package com.topicwise.graph.weightedDirectedAcyclic;
 
 import com.topicwise.array.PrintArray;
 import com.topicwise.graph.AdjacentListGraph;

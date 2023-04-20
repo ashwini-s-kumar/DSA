@@ -1,13 +1,11 @@
-package com.topicwise.graph.difficult.dfsproblems;
+package com.topicwise.graph.directedAcyclic;
 
 import com.topicwise.graph.AdjacentListGraph;
 
-import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.Queue;
 import java.util.Stack;
 
-public class TopologicalSorting {
+public class DfsTopologicalSorting {
 
     private static int v = 5;
     public static boolean [] visited = new boolean[v];

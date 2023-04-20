@@ -1,20 +1,21 @@
-package com.topicwise.graph.easy;
+package com.topicwise.graph.normal;
 
 import com.topicwise.graph.AdjacentListGraph;
 
 import java.util.ArrayList;
 
-public class IslandDFS {
-    static int v = 7;
+public class DFS {
+    static int v =7;
     static boolean [] visited = new boolean[v];
 
-    public static void dfs(ArrayList<ArrayList<Integer>>adj, int s){
+    public static void printDFS(ArrayList<ArrayList<Integer>>adj, int s)
+    {
         visited[s] = true;
         System.out.print(s + " ");
         for(int i : adj.get(s))
         {
             if(visited[i] == false)
-                dfs(adj, i);
+                printDFS(adj ,i);
         }
     }
     public static void main(String [] arrs)
@@ -37,14 +38,8 @@ public class IslandDFS {
         AdjacentListGraph.insertEdge(adj, 4, 6);
         AdjacentListGraph.insertEdge(adj, 5, 6);
         System.out.println(adj.toString());
-        int countIslands = 0;
-        for(int i = 0; i < v; i++)
-        {
-            if(visited[i] == false) {
-                dfs(adj, i);
-                countIslands++;
-            }
-        }
-        System.out.println("No of islands :"+countIslands);
+        printDFS(adj,0);
+
+        // o/p : 0 1 2 3 4 5 6
     }
 }

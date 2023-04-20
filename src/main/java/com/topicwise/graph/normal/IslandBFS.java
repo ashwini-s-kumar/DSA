@@ -1,4 +1,4 @@
-package com.topicwise.graph.difficult.bfsproblems;
+package com.topicwise.graph.normal;
 
 import com.topicwise.graph.AdjacentListGraph;
 
@@ -6,45 +6,36 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Queue;
 
-public class ShortestPathUnWeightedGraph {
-    static void printDistance(ArrayList<ArrayList<Integer>> adj, int v, int source)
+public class IslandBFS {
+    public static void bfs(ArrayList<ArrayList<Integer>>adj, boolean [] visited, int s)
     {
-        Queue<Integer> q = new ArrayDeque();
-        boolean  [] visited = new boolean[v+1];
-        int [] dist = new int[v+1];
-
-        q.add(source);
-        dist[source] = 0;
-        visited[source] = true;
-
+        Queue<Integer>q = new ArrayDeque<>();
+        q.add(s);
+        visited[s] = true;
         while(!q.isEmpty())
         {
             int cur = q.poll();
-            System.out.print(" " + cur +"-"+dist[cur]+" ");
-
-            for(int x : adj.get(cur))
-            {
-                if(visited[x] == false)
-                {
-                    dist[x] = dist[cur] + 1;
-                    visited[x] = true;
-                    q.add(x);
+            for(int i : adj.get(cur)) {
+                if (visited[i] == false) {
+                    visited[i] = true;
+                    q.add(i);
                 }
             }
-
         }
-        System.out.println(" ");
     }
-
     public static void main(String [] arrs)
     {
-        int  v = 7;
+        int v = 7;
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
         for( int i = 0 ; i < v; i++)
         {
             adj.add(new ArrayList<>());
         }
-
+        /*
+        0 - 1 - 3
+        |   |
+          2
+         */
         AdjacentListGraph.insertEdge(adj, 0, 1);
         AdjacentListGraph.insertEdge(adj, 0, 4);
         AdjacentListGraph.insertEdge(adj, 1, 2);
@@ -53,8 +44,17 @@ public class ShortestPathUnWeightedGraph {
         AdjacentListGraph.insertEdge(adj, 4, 6);
         AdjacentListGraph.insertEdge(adj, 5, 6);
         System.out.println(adj.toString());
-        System.out.println(" ");
-        printDistance(adj, 7, 0);
 
+        int countIslands = 0;
+        boolean [] visited = new boolean[v];
+        for(int i = 0; i < v; i++)
+        {
+            if(visited[i] == false)
+            {
+                countIslands++;
+                bfs(adj,visited,i);
+            }
+        }
+        System.out.println("no of islands :"+countIslands);
     }
 }

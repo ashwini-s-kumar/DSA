@@ -1,29 +1,26 @@
-package com.topicwise.graph.difficult.dfsproblems;
+package com.topicwise.graph.unDirected;
 
 import com.topicwise.graph.AdjacentListGraph;
 
 import java.util.ArrayList;
 
-public class CycleDetectionDirectedGraph {
-    static boolean detectCycle(ArrayList<ArrayList<Integer>> adj, boolean [] visited, boolean [] recursionStack, int source)
+public class DfsCycleDetection {
+    static boolean detectCycle(ArrayList<ArrayList<Integer>> adj, int source, boolean [] visited, int parent)
     {
-
-        recursionStack[source] = true;
         visited[source] = true;
         for(int x: adj.get(source))
         {
-            if(visited[x] == false)
-            {
-                if(detectCycle(adj, visited, recursionStack, x))
+            if(visited[x] == false) {
+                if(detectCycle(adj, x, visited,source) == true) {
                     return true;
+                }
             }
-            else if(recursionStack[x] == true)
+            else if(x != parent) {
                 return true;
+            }
         }
-        recursionStack[source] = false;
         return false;
     }
-
     public static void main(String [] arrs)
     {
         int  v = 7;
@@ -39,16 +36,15 @@ public class CycleDetectionDirectedGraph {
         AdjacentListGraph.insertEdge(adj, 2, 3);
         AdjacentListGraph.insertEdge(adj, 4, 5);
         AdjacentListGraph.insertEdge(adj, 4, 6);
-        //AdjacentListGraph.insertEdge(adj, 5, 6);
+        AdjacentListGraph.insertEdge(adj, 5, 6);
         System.out.println(adj.toString());
         System.out.println(" ");
 
         boolean [] visited = new boolean[v];
-        boolean [] recursionStack = new boolean[v];
 
         for(int i=0; i<v; i++) {
             if(visited[i] == false) {
-                if (detectCycle(adj, visited, recursionStack, i)) {
+                if (detectCycle(adj, i, visited, -1)) {
                     System.out.println("Cycle detected");
                     return;
                 }
