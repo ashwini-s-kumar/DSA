@@ -46,7 +46,7 @@ public class IslandBFS {
         System.out.println(adj.toString());
 
         int countIslands = 0;
-        boolean [] visited = new boolean[v+1];
+        boolean [] visited = new boolean[v];
         for(int i = 0; i < v; i++)
         {
             if(visited[i] == false)

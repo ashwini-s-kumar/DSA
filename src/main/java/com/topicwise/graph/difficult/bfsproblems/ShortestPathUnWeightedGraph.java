@@ -6,7 +6,7 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Queue;
 
-public class ShortestPath {
+public class ShortestPathUnWeightedGraph {
     static void printDistance(ArrayList<ArrayList<Integer>> adj, int v, int source)
     {
         Queue<Integer> q = new ArrayDeque();

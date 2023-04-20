@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class DFS {
     static int v =7;
-    static boolean [] visited = new boolean[v+1];
+    static boolean [] visited = new boolean[v];
 
     public static void printDFS(ArrayList<ArrayList<Integer>>adj, int s)
     {
@@ -39,5 +39,7 @@ public class DFS {
         AdjacentListGraph.insertEdge(adj, 5, 6);
         System.out.println(adj.toString());
         printDFS(adj,0);
+
+        // o/p : 0 1 2 3 4 5 6
     }
 }

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class IslandDFS {
     static int v = 7;
-    static boolean [] visited = new boolean[v+1];
+    static boolean [] visited = new boolean[v];
 
     public static void dfs(ArrayList<ArrayList<Integer>>adj, int s){
         visited[s] = true;

@@ -9,7 +9,7 @@ import java.util.Queue;
 public class BFS {
     public static void printBFS(ArrayList<ArrayList<Integer>>adj,int v, int s)
     {
-        boolean [] visited = new boolean[v+1];
+        boolean [] visited = new boolean[v];
         Queue<Integer> q = new ArrayDeque<>();
         q.add(s);
         visited[s] = true;
@@ -45,7 +45,6 @@ public class BFS {
         AdjacentListGraph.insertEdge(adj, 5, 6);
         System.out.println(adj.toString());
         printBFS(adj, 7, 0);
-
 
     }
 }
