@@ -43,8 +43,8 @@ public class CycleDetectionDirectedGraph {
         System.out.println(adj.toString());
         System.out.println(" ");
 
-        boolean [] visited = new boolean[v+1];
-        boolean [] recursionStack = new boolean[v+1];
+        boolean [] visited = new boolean[v];
+        boolean [] recursionStack = new boolean[v];
 
         for(int i=0; i<v; i++) {
             if(visited[i] == false) {
