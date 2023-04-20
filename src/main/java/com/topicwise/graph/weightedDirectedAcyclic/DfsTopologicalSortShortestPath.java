@@ -6,7 +6,7 @@ import com.topicwise.graph.AdjacentListGraph;
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class ShortestPathWeightedDirectedAcyclicGraph {
+public class DfsTopologicalSortShortestPath {
     private static int v = 6;
     private static boolean [] visited = new boolean[v];
 
