@@ -8,8 +8,6 @@ public class BellmanFordShortedPath {
 
     // NOTE : works from negative weighted graph, and also detect the negative weight cycle
 
-    private static boolean isCycle = false;
-
     static class Edge {
         int src, dest, weight;
         Edge() {
@@ -23,8 +21,8 @@ public class BellmanFordShortedPath {
     // Creates a graph with V vertices and E edges
     BellmanFordShortedPath(int v, int e)
     {
-        v = v;
-        e = e;
+        V = v;
+        E = e;
         edge = new Edge[e];
         for (int i=0; i<e; ++i)
             edge[i] = new Edge();
