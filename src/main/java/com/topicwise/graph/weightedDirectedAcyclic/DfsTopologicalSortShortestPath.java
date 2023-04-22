@@ -57,14 +57,14 @@ public class DfsTopologicalSortShortestPath {
             adj.add(new ArrayList<>());
         }
 
-        AdjacentListGraph.insertEdgeDAG(adj, 0, 1);
-        AdjacentListGraph.insertEdgeDAG(adj, 0, 2);
-        AdjacentListGraph.insertEdgeDAG(adj, 1, 3);
-        AdjacentListGraph.insertEdgeDAG(adj, 2, 3);
-        AdjacentListGraph.insertEdgeDAG(adj, 2, 4);
-        AdjacentListGraph.insertEdgeDAG(adj, 3, 4);
-        AdjacentListGraph.insertEdgeDAG(adj, 3, 5);
-        AdjacentListGraph.insertEdgeDAG(adj, 4, 5);
+        AdjacentListGraph.insertEdgeDirected(adj, 0, 1);
+        AdjacentListGraph.insertEdgeDirected(adj, 0, 2);
+        AdjacentListGraph.insertEdgeDirected(adj, 1, 3);
+        AdjacentListGraph.insertEdgeDirected(adj, 2, 3);
+        AdjacentListGraph.insertEdgeDirected(adj, 2, 4);
+        AdjacentListGraph.insertEdgeDirected(adj, 3, 4);
+        AdjacentListGraph.insertEdgeDirected(adj, 3, 5);
+        AdjacentListGraph.insertEdgeDirected(adj, 4, 5);
         System.out.println(adj.toString());
         System.out.println(" ");
 

@@ -7,6 +7,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PrimsShortestPathSpanningTree {
+
+    // NOTE : Does not work from negative weighted graph
     private static int v = 4;
 
     private static ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
@@ -65,11 +67,11 @@ public class PrimsShortestPathSpanningTree {
             adj.add(i , new ArrayList<>());
         }
 
-        AdjacentListGraph.insertEdgeDAG(adj, 0, 1);
-        AdjacentListGraph.insertEdgeDAG(adj, 0, 2);
-        AdjacentListGraph.insertEdgeDAG(adj, 1, 2);
-        AdjacentListGraph.insertEdgeDAG(adj, 1, 3);
-        AdjacentListGraph.insertEdgeDAG(adj, 2, 3);
+        AdjacentListGraph.insertEdgeDirected(adj, 0, 1);
+        AdjacentListGraph.insertEdgeDirected(adj, 0, 2);
+        AdjacentListGraph.insertEdgeDirected(adj, 1, 2);
+        AdjacentListGraph.insertEdgeDirected(adj, 1, 3);
+        AdjacentListGraph.insertEdgeDirected(adj, 2, 3);
         System.out.println(adj.toString());
         System.out.println(" ");
 

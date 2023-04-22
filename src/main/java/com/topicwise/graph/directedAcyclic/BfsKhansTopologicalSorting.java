@@ -56,10 +56,10 @@ public class BfsKhansTopologicalSorting {
             adj.add(new ArrayList<>());
         }
 
-        AdjacentListGraph.insertEdgeDAG(adj, 0, 1);
-        AdjacentListGraph.insertEdgeDAG(adj, 1, 2);
-        AdjacentListGraph.insertEdgeDAG(adj, 3, 4);
-        AdjacentListGraph.insertEdgeDAG(adj, 3, 2);
+        AdjacentListGraph.insertEdgeDirected(adj, 0, 1);
+        AdjacentListGraph.insertEdgeDirected(adj, 1, 2);
+        AdjacentListGraph.insertEdgeDirected(adj, 3, 4);
+        AdjacentListGraph.insertEdgeDirected(adj, 3, 2);
         System.out.println(adj.toString());
         System.out.println(" ");
 

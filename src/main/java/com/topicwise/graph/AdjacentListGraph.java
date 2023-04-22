@@ -9,7 +9,7 @@ public class AdjacentListGraph {
         adj.get(v).add(u);
     }
 
-    public static void insertEdgeDAG(ArrayList<ArrayList<Integer>> adj, int v, int u)
+    public static void insertEdgeDirected(ArrayList<ArrayList<Integer>> adj, int v, int u)
     {
         adj.get(v).add(u);
     }

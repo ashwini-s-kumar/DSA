@@ -7,6 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DijkstraShortestPath {
+
+    // NOTE : Does not work from negative weighted graph
+
     private static int v = 4;
 
     private static ArrayList<ArrayList<Integer>> adjDirected = new ArrayList<>();
@@ -68,11 +71,11 @@ public class DijkstraShortestPath {
             adjDirected.add(i , new ArrayList<>());
         }
 
-        AdjacentListGraph.insertEdgeDAG(adjDirected, 0, 1);
-        AdjacentListGraph.insertEdgeDAG(adjDirected, 0, 2);
-        AdjacentListGraph.insertEdgeDAG(adjDirected, 1, 2);
-        AdjacentListGraph.insertEdgeDAG(adjDirected, 1, 3);
-        AdjacentListGraph.insertEdgeDAG(adjDirected, 2, 3);
+        AdjacentListGraph.insertEdgeDirected(adjDirected, 0, 1);
+        AdjacentListGraph.insertEdgeDirected(adjDirected, 0, 2);
+        AdjacentListGraph.insertEdgeDirected(adjDirected, 1, 2);
+        AdjacentListGraph.insertEdgeDirected(adjDirected, 1, 3);
+        AdjacentListGraph.insertEdgeDirected(adjDirected, 2, 3);
 
         System.out.println(adjDirected.toString());
         System.out.println(" ");
