@@ -5,7 +5,7 @@ import com.topicwise.graph.AdjacentListGraph;
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class KosarajuStronglyConnectedComponent {
+public class DfsKosarajuStronglyConnectedComponent {
     private static Stack<Integer> stack = new Stack<>();
 
     private static void printDfs(ArrayList<ArrayList<Integer>> adj, int u, boolean [] visited){
