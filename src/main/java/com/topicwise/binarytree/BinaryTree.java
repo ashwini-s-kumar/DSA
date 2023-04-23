@@ -96,4 +96,26 @@ public class BinaryTree {
         InsertIntoBST.insertIntoAugmentedBST(root, 80);
         return root;
     }
+
+    // wrong BST - 2 elements are swapped
+    /*
+                            20
+                  60                      80
+            4          10           8          100
+     */
+    public static Node getSwappedBST()
+    {
+        Node root = new Node(20);
+        root.left = new Node(60);
+        root.right = new Node(80);
+
+        root.left.left = new Node(4);
+        root.left.right= new Node(10);
+
+        root.right.left = new Node(8);
+        root.right.right = new Node(100);
+        return root;
+    }
+
+
 }
