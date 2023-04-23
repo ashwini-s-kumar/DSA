@@ -1,6 +1,9 @@
-package com.topicwise.binarysearchtree.easy.operations;
+package com.topicwise.binarysearchtree.easy;
 
 
+import com.topicwise.binarysearchtree.BinarySearchTree;
+import com.topicwise.binarytree.BinaryTree;
+import com.topicwise.binarytree.Node;
 import com.topicwise.binarytree.NodeHD;
 
 import java.util.ArrayDeque;
@@ -9,7 +12,7 @@ import java.util.Queue;
 import java.util.TreeMap;
 
 public class VerticalSum {
-    public void  verticalSum(NodeHD root)
+    public static void  verticalSum(NodeHD root)
     {
         Map<Integer,Integer> hdSums = new TreeMap<>();
         Queue<NodeHD> queue = new ArrayDeque<>();
@@ -41,9 +44,17 @@ public class VerticalSum {
                 queue.add(cur.right);
             }
         }
-        for(Map.Entry<Integer,Integer> entry : hdSums.entrySet())
-        {
-            System.out.println(entry.getValue() + " ");
-        }
+
+        System.out.println(hdSums);
+
+//        for(Map.Entry<Integer,Integer> entry : hdSums.entrySet())
+//        {
+//            System.out.println(entry.getValue() + " ");
+//        }
+    }
+
+    public static void main(String [] arr){
+        NodeHD simpleBST = BinaryTree.getSimpleBinaryBTwithHD();
+        verticalSum(simpleBST);
     }
 }

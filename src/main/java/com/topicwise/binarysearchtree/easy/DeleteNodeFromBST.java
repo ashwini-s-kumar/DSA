@@ -1,6 +1,9 @@
-package com.topicwise.binarysearchtree.easy.operations;
+package com.topicwise.binarysearchtree.easy;
 
+import com.topicwise.binarysearchtree.BinarySearchTree;
 import com.topicwise.binarytree.Node;
+import com.topicwise.binarytree.easy.traversals.LevelOrderLineWise;
+
 /**
  *
  * @author ashwini.s
@@ -33,5 +36,13 @@ public class DeleteNodeFromBST {
             }
         }
         return root;
+    }
+
+    public static void main(String [] arr){
+        Node simpleBST = BinarySearchTree.getSimpleBST();
+        System.out.println("");
+        System.out.println("delete 60  into simpleBST : " );
+        deleteNodeFromBST(simpleBST , 60);
+        LevelOrderLineWise.levelOrderLineWise(simpleBST);
     }
 }

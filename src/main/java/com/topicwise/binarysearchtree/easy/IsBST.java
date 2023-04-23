@@ -1,5 +1,6 @@
-package com.topicwise.binarysearchtree.easy.properties;
+package com.topicwise.binarysearchtree.easy;
 
+import com.topicwise.binarysearchtree.BinarySearchTree;
 import com.topicwise.binarytree.Node;
 
 public class IsBST {
@@ -11,8 +12,8 @@ public class IsBST {
            InOrder : 5 20  30 50 55 60 70
 
      */
-    Node prev = null;
-    public boolean isBstInorder(Node root)
+    static Node prev = null;
+    public static boolean isBstInorder(Node root)
     {
         if(root == null)
             return true;
@@ -24,14 +25,8 @@ public class IsBST {
         return  isBstInorder(root.right);
     }
 
-    public boolean isBst(Node root, Node l, Node r)
-    {
-        if(root == null)
-            return true;
-        if(l == null || root.data >= l.data)
-            return false;
-        else if(r == null || root.data <= r.data)
-            return false;
-        return isBst(root.left, l, root) && isBst(root.right, root, r);
+    public static void main(String  [] arr){
+        Node simpleBST = BinarySearchTree.getSimpleBST();
+        System.out.println(isBstInorder(simpleBST));
     }
 }

@@ -79,7 +79,7 @@ public class AVLTree {
             cur = cur.left;
         return cur;
     }
-    /*Node deleteAVL(Node root, int key)
+    Node deleteAVL(Node root, int key)
     {
         if(root == null)
             return null;
@@ -107,9 +107,22 @@ public class AVLTree {
         root.height = 1+Math.max(HeightBt.heightBt(root.left),HeightBt.heightBt(root.right));
         int balanced = getBalanced(root);
 
-
-
-    }*/
+        if(balanced > 1 && getBalanced(root.left) >=0){
+            return rightRotate(root);
+        }
+        if(balanced > 1 && getBalanced(root.left) < 0){
+            root.left = leftRotate(root.left);
+            return rightRotate(root);
+        }
+        if(balanced < -1 && getBalanced(root.right) <=0){
+            return leftRotate(root);
+        }
+        if(balanced < -1 && getBalanced(root.right) > 0){
+            root.right = rightRotate(root.right);
+            return leftRotate(root);
+        }
+        return root;
+    }
     public static void main(String [] arr)
     {
         AVLTree tree = new AVLTree();
@@ -125,6 +138,14 @@ public class AVLTree {
              20       40
           10   25        50
          */
+        System.out.println("The pre-Order traversal of AVL tree : ");
+        PreOrder.preOrder(tree.root);
+
+        tree.root = tree.deleteAVL(tree.root, 50);
+        System.out.println("The pre-Order traversal of AVL tree : ");
+        PreOrder.preOrder(tree.root);
+
+        tree.root = tree.deleteAVL(tree.root, 40);
         System.out.println("The pre-Order traversal of AVL tree : ");
         PreOrder.preOrder(tree.root);
     }

@@ -1,5 +1,6 @@
-package com.topicwise.binarysearchtree.easy.properties;
+package com.topicwise.binarysearchtree.easy;
 
+import com.topicwise.binarysearchtree.BinarySearchTree;
 import com.topicwise.binarytree.Node;
 /**
  *
@@ -21,5 +22,11 @@ public class BSTFloor {
             }
         }
         return res;
+    }
+    public static void main(String [] arr){
+        Node simpleBST = BinarySearchTree.getSimpleBST();
+        System.out.println("");
+        System.out.println("floor of  44  in simpleBST : " + floor(simpleBST,44).data );
+
     }
 }
