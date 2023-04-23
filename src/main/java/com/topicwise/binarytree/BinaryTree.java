@@ -1,4 +1,7 @@
 package com.topicwise.binarytree;
+
+import com.topicwise.binarysearchtree.easy.InsertIntoBST;
+
 /**
  *
  * @author ashwini.s
@@ -69,6 +72,28 @@ public class BinaryTree {
         root.left.right = new NodeHD(5);
         root.right.left = new NodeHD(6);
         root.right.right = new NodeHD(7);
+        return root;
+    }
+
+    /*
+                                    50
+                     20                         100
+                10          40            70              120
+           4                          60      80
+     */
+
+    public static NodeLCount getAugmentedBST(){
+
+        NodeLCount root = new NodeLCount(50);
+        InsertIntoBST.insertIntoAugmentedBST(root, 20);
+        InsertIntoBST.insertIntoAugmentedBST(root, 100);
+        InsertIntoBST.insertIntoAugmentedBST(root, 10);
+        InsertIntoBST.insertIntoAugmentedBST(root, 40);
+        InsertIntoBST.insertIntoAugmentedBST(root, 70);
+        InsertIntoBST.insertIntoAugmentedBST(root, 120);
+        InsertIntoBST.insertIntoAugmentedBST(root, 4);
+        InsertIntoBST.insertIntoAugmentedBST(root, 60);
+        InsertIntoBST.insertIntoAugmentedBST(root, 80);
         return root;
     }
 }

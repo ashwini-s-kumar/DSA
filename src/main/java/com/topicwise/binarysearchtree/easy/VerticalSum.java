@@ -46,11 +46,6 @@ public class VerticalSum {
         }
 
         System.out.println(hdSums);
-
-//        for(Map.Entry<Integer,Integer> entry : hdSums.entrySet())
-//        {
-//            System.out.println(entry.getValue() + " ");
-//        }
     }
 
     public static void main(String [] arr){
