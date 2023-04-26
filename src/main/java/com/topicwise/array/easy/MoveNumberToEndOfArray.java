@@ -7,28 +7,26 @@ public class MoveNumberToEndOfArray {
     public static void moveAllInstancesToEnd(int [] array, int toMove)
     {
         PrintArray printArray = new PrintArray();
-// Mark left pointer
-        int i = 0;
-
-        // Mark the right pointer
-        int j = array.length - 1;
+        // Mark left , right pointer
+        int i = 0, j = array.length - 1;
 
         // Iterate until left pointer
         // crosses the right pointer
         while (i < j)
         {
-            while (i < j && array[j] == toMove)
+            while (i < j && array[j] == toMove) {
                 // Decrement right pointer => the toMove number is already in the end
                 j--;
-
-            if (array[i] == toMove)
-
+            }
+            if (array[i] == toMove) {
                 // Swap the two elements
                 // in the array
                 swap(array, i, j);
+            }
             // Increment left pointer
             i++;
         }
+
         printArray.print(array);
     }
 
@@ -37,5 +35,15 @@ public class MoveNumberToEndOfArray {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
+    }
+
+    public static void main(String [] arr){
+        int [] moveNumber = {2, 1, 2, 2, 2, 3, 4, 2};
+        int toMove = 2;
+        System.out.println("The given array is " );
+        PrintArray.print(moveNumber);
+        System.out.println(" , toMove = "+toMove+ ", array after moving "+ toMove);
+        moveAllInstancesToEnd(moveNumber, toMove);
+
     }
 }

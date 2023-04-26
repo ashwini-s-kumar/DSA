@@ -1,7 +1,9 @@
 package com.topicwise.array.easy;
 
+import com.topicwise.array.PrintArray;
+
 public class SecondLargestNumber {
-    public int secondLargest(int [] arr)
+    public static int secondLargest(int [] arr)
     {
         int lar=Integer.MIN_VALUE, secLar=Integer.MIN_VALUE;
         if(arr.length < 2) {
@@ -21,5 +23,14 @@ public class SecondLargestNumber {
             }
         }
         return secLar;
+    }
+
+    public static void main(String [] arr){
+        System.out.println(" ");
+        System.out.print(" Second Largest in the given array : ");
+        int [] arr3 = {30, 50, 70, 20, 90, 500, 420,40};
+        PrintArray.print(arr3);
+        System.out.print( " is : " + secondLargest(arr3));
+
     }
 }

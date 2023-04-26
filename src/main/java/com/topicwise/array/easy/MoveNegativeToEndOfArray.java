@@ -3,8 +3,8 @@ package com.topicwise.array.easy;
 import com.topicwise.array.PrintArray;
 
 public class MoveNegativeToEndOfArray {
-    PrintArray printArray = new PrintArray();
-    public void moveNegative(int [] arr)
+
+    public static void moveNegative(int [] arr)
     {
         int i = 0, j = arr.length-1;
         while(i<j)
@@ -15,7 +15,17 @@ public class MoveNegativeToEndOfArray {
                 MoveNumberToEndOfArray.swap(arr, i, j);
             i++;
         }
-        printArray.print(arr);
+        PrintArray.print(arr);
+    }
+
+    public static void main(String [] arr){
+        System.out.println(" ");
+        System.out.print(" move negative numbers in the given array : ");
+        int [] arr11 = { 1, -3, 4, -5 , -100, -8, 7, 10, -23, 18};
+        PrintArray.print(arr11);
+        System.out.print(" is : ");
+        moveNegative(arr11);
+
     }
 
 }
