@@ -96,11 +96,6 @@ public class ArrayExecutor {
         System.out.print( " is : "+ maxSubArraySum.maxSubArraySum(arr6));
 
 
-        System.out.println(" ");
-        System.out.print(" Longest Even Odd  of subArray in the given array : ");
-        int [] arr7 = {1,2,3,1,4,5,6,7,8,8};
-        printArray.print(arr7);
-        System.out.print( " is : "+ longestEvenOddSubArray.longestEvenOddSubArray(arr7));
 
         System.out.println(" ");
         System.out.print(" Max Sum of Circular subArray in the given array : ");
