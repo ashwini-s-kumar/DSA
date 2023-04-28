@@ -1,5 +1,7 @@
 package com.topicwise.linkedlist;
 
+import com.topicwise.doublyLL.LruNode;
+
 import java.util.Stack;
 
 public class PrintLinkedList {

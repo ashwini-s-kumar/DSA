@@ -7,11 +7,12 @@ public class LongestSubStringNonRepeatingChar {
         if (s.length() == 0) {
             return 0;
         }
-        int n = s.length();
         HashSet<Character> st = new HashSet<Character>();
-        int len = 1;
         st.add(s.charAt(0));
+
+        int n = s.length();
         int i = 1;
+        int len = 1;
         int maxLen = 0;
         while (i < n) {
             if (s.charAt(i) != s.charAt(i - 1)
@@ -24,14 +25,9 @@ public class LongestSubStringNonRepeatingChar {
                 }
             }
             else {
-                if (len == 1) {
-                    i++;
-                }
-                else {
-                    st.clear();
-                    i = i - len + 1;
-                    len = 0;
-                }
+                st.clear();
+                i = i - len + 1;
+                len = 0;
             }
         }
         return Math.max(maxLen, len);

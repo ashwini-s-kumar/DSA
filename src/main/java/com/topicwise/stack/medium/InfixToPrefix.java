@@ -54,7 +54,7 @@ public class InfixToPrefix {
                 // pop ')'
                 stack.pop();
             } else {
-                // c is operand
+                // c is operator
                 while(!stack.isEmpty() &&
                         precedence(c) < precedence(stack.peek())) {
                     res += stack.pop();

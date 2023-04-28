@@ -37,7 +37,7 @@ public class InfixToPostfix {
                 // pop '('
                 stack.pop();
             } else {
-                // c is operand
+                // c is operator
                 while(!stack.isEmpty() &&
                         precedence(c) <= precedence(stack.peek())) {
                     res += stack.pop();
@@ -58,7 +58,7 @@ public class InfixToPostfix {
 
     public static void main(String[] args)
     {
-        String exp = "a+b*(c^d-e)^(f+g*h)-i";
+        String exp = "a+b*(c^d-e)^(f+g*h)-i";// abcd^e-fgh*+^*+i-
         //String exp = "a+(b*c)";
 
         System.out.println(convert(exp));

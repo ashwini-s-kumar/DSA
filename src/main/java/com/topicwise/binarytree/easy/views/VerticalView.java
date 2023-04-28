@@ -26,8 +26,9 @@ public class VerticalView {
                 verticalNodes = new ArrayList<>();
                 verticalNodes.add(data);
             }
-            else
+            else {
                 verticalNodes.add(data);
+            }
             hdToNodeData.put(hd,verticalNodes);
             if(cur.left != null)
             {

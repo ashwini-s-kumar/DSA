@@ -1,11 +1,10 @@
 package com.topicwise.hashing.medium.collision.openAddressing;
 
 public class LinearProbing {
-    int size,capacity;
+    int capacity;
     int [] table;
 
     public LinearProbing(int capacity){
-        this.size = 0;
         this.capacity = capacity;
         this.table = new int[capacity];
         for(int i = 0; i < capacity; i++){
@@ -22,12 +21,7 @@ public class LinearProbing {
         while(table[hash] != -1 && table[hash] != -2 && table[hash] != key){
             hash = (hash +1) % capacity;
         }
-        if(table[hash] == key){
-           System.out.println("The key already exist !");
-           return;
-        }
         table[hash] = key;
-        size ++;
         System.out.println("The key is successfully added !");
     }
 
@@ -37,7 +31,6 @@ public class LinearProbing {
             if(table[hash] == key){
                 table[hash] = -2;
                 System.out.println("Successfully removed key : "+ key);
-                size --;
                 return;
             }
             hash = (hash + 1) % capacity;

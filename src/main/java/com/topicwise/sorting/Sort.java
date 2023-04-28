@@ -8,8 +8,8 @@ public class Sort {
           HeapSort - nlog(n)  - based on Binary Heap data structure. Similar to the selection sort.
           done ---> TreeSort - nlog(n)  - Binary Search & inorder traversal.
           done ---> ShellSort - nlog(n)  - variation of Insertion Sort
-          done ---> InsertionSort - n
-          done ---> BubbleSort -  n
+          done ---> InsertionSort - n^2
+          done ---> BubbleSort -  n^2
           done ---> BucketSort - n+k
           done ---> SelectionSort - n^2
 

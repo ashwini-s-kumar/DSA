@@ -3,6 +3,7 @@ package com.topicwise.binarytree.easy.traversals;
 import com.topicwise.binarytree.Node;
 
 import java.util.ArrayDeque;
+import java.util.LinkedList;
 import java.util.Queue;
 /**
  *
@@ -13,7 +14,7 @@ public class LevelOrder {
     {
         if(root == null)
             return;
-        Queue<Node> q = new ArrayDeque<>();
+        Queue<Node> q = new LinkedList<>();
         q.add(root);
         while(!q.isEmpty()) {
             Node cur = q.poll();

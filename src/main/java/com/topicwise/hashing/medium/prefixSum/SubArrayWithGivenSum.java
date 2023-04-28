@@ -20,8 +20,10 @@ public class SubArrayWithGivenSum {
                 break;
             }
             if(map.containsKey(prefixSum - sum)){
+                System.out.println("inside map.containes");
                 start = map.get(prefixSum - sum) + 1;
                 end = i;
+                break;
             }
             map.put(prefixSum, i);
         }
@@ -36,5 +38,6 @@ public class SubArrayWithGivenSum {
         isPresent(array,15);
         isPresent(array,1);
         isPresent(array,6);
+
     }
 }

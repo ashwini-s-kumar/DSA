@@ -12,11 +12,19 @@ span :
 
  */
 public class StockSpan {
+
+    /*
+    span =
+        case 1 : if there is a greater element on left
+            span = current index - index of closest greater element on left
+        case 2 : If there is no greater element on left
+            span = current index + 1
+     */
     static void printSpan(int [] arr)
     {
         Deque<Integer> stack = new ArrayDeque<>();
-        System.out.print("The span = " + 1);
         stack.add(0);
+        System.out.print("The span = " + 1);
         int span = 0;
         for( int i = 1; i < arr.length; i++)
         {

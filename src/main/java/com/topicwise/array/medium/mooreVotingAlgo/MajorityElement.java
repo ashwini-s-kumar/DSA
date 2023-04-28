@@ -1,5 +1,7 @@
 package com.topicwise.array.medium.mooreVotingAlgo;
-
+/*
+An element is called a majority element when it appears more than n/2 times in an array of length n
+ */
 public class MajorityElement {
     public int findCandidate( int [] arr)
     {

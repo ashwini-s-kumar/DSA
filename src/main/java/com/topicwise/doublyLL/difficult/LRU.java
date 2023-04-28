@@ -1,6 +1,6 @@
-package com.topicwise.linkedlist.difficult;
+package com.topicwise.doublyLL.difficult;
 
-import com.topicwise.linkedlist.LruNode;
+import com.topicwise.doublyLL.LruNode;
 import com.topicwise.linkedlist.PrintLinkedList;
 
 import java.util.HashMap;
@@ -54,14 +54,11 @@ public class LRU {
     }
 
     public static void addFirst(LruNode node){
-        LruNode next = head.next;
-        LruNode prev = head;
+        node.next = head.next;
+        node.prev = head;
 
-        node.prev = prev;
-        node.next = next;
-
-        prev.next = node;
-        next.prev = node;
+        head.next.prev = node;
+        head.next = node;
     }
     public static void remove(LruNode node){
         LruNode next = node.next;

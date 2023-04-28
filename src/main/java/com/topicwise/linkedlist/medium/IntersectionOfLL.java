@@ -77,7 +77,7 @@ public class IntersectionOfLL {
         PrintLinkedList printLinkedList = new PrintLinkedList();
         printLinkedList.print(root1);
         System.out.println(" ");
-        printLinkedList.print(root1);
+        printLinkedList.print(root2);
         System.out.println(" ");
         System.out.println("After the intersection of LL : ");
         System.out.println(" ");

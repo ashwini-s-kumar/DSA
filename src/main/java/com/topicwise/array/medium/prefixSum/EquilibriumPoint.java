@@ -1,5 +1,8 @@
 package com.topicwise.array.medium.prefixSum;
 
+/*
+an index such that sum of elements at lower indexes is equal to sum of elements at higher indexes.
+ */
 public class EquilibriumPoint {
     private static void printEquilibrium(int [] arr){
         int rightPrefix = 0 ;

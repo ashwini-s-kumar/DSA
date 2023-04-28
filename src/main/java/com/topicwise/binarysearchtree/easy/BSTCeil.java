@@ -20,8 +20,9 @@ public class BSTCeil {
                 res= root;
                 root = root.left;
             }
-            else
+            else {
                 root = root.right;
+            }
         }
         return res;
     }

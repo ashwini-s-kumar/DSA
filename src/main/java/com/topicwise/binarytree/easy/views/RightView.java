@@ -9,6 +9,14 @@ import java.util.Queue;
  * @author ashwini.s
  */
 public class RightView {
+
+    public static void simpleRightView(Node root){
+        if(root == null){
+            return;
+        }
+        System.out.println(root.data);
+        simpleRightView(root.right);
+    }
     public static void rightView(Node root)
     {
         if(root == null)

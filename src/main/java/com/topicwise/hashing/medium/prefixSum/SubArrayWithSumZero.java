@@ -21,6 +21,7 @@ public class SubArrayWithSumZero {
                 break;
             }
             if(map.containsKey(prefixSum)){
+                System.out.println("inside map.containes");
                 start = map.get(prefixSum) + 1;
                 end = i;
                 break;

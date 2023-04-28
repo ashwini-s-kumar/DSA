@@ -1,4 +1,4 @@
-package com.topicwise.linkedlist;
+package com.topicwise.doublyLL;
 
 public class LruNode {
     public int key;

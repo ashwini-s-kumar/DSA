@@ -15,7 +15,7 @@ public class MergeKSortedLL {
                 // merge List i with List j and store
                 // merged list in List i
                 arr[i] = mergeTwoSortedLL.mergeTwoSortedLLRecursion(arr[i], arr[j]);
-
+                PrintLinkedList.print(arr[i]);
                 // consider next pair
                 i++;
                 j--;

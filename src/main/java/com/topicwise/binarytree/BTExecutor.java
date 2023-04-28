@@ -53,11 +53,15 @@ public class BTExecutor {
 
         System.out.println("");
         System.out.println("LeftView traversal of simpleBinaryBT:");
-        LeftView.leftView(simpleBinaryBT);
+        LeftView.simpleLeftView(BinaryTree.getChildSumPropertyBT());
+        System.out.println("=========================================");
+        LeftView.leftView(BinaryTree.getChildSumPropertyBT());
 
         System.out.println("");
         System.out.println("RightView traversal of simpleBinaryBT:");
         RightView.rightView(simpleBinaryBT);
+        System.out.println("===============================================");
+        RightView.simpleRightView(simpleBinaryBT);
 
         System.out.println("");
         System.out.println("sizeBT  of simpleBinaryBT: " + SizeBT.sizeBT(simpleBinaryBT));

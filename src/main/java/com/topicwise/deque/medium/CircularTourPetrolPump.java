@@ -28,7 +28,7 @@ public class CircularTourPetrolPump {
                 start = (start + 1) % n; // start is the next petrol pump
 
                 if(start == 0){
-                    System.out.print("Reached 0th pump again, with petrol to start.");
+                    System.out.print("Reached 0th pump again, without  petrol to start.");
                     return -1;
                 }
             }
