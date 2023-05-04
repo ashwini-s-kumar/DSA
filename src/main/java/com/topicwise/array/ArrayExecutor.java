@@ -108,12 +108,6 @@ public class ArrayExecutor {
         printArray.print(arr8);
         majorityElement.printMajority(arr8);
 
-        System.out.println(" ");
-        System.out.print(" Rain Water in the given array : ");
-        int [] arr9 = { 12, 11, 10, 9};
-        printArray.print(arr9);
-        System.out.print(" is : ");
-        System.out.print(trapRainWater.rainWater(arr9));
 
 
 

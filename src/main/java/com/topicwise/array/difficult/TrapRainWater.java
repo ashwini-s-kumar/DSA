@@ -1,10 +1,11 @@
 package com.topicwise.array.difficult;
 
+import com.topicwise.array.PrintArray;
 import com.topicwise.math.Arithmetics;
 
 public class TrapRainWater {
 
-    public int rainWater(int [] arr)
+    public static int rainWater(int [] arr)
     {
         int [] lMax = new int[arr.length];
         int [] rMax = new int[arr.length];
@@ -27,5 +28,14 @@ public class TrapRainWater {
         }
 
         return rain;
+    }
+    public static void main(String [] arr){
+        System.out.println(" ");
+        System.out.print(" Rain Water in the given array : ");
+        int [] arr9 =  {3, 0, 2, 0, 4};
+        PrintArray.print(arr9);
+        System.out.print(" is : ");
+        System.out.print(rainWater(arr9));
+
     }
 }
