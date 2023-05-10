@@ -40,12 +40,4 @@ public class NaivePatternSearch {
         System.out.println(findAllIndex("ABABABCD", "ABAB"));
 
     }
-
-    private static void printResult(List<Integer> res){
-        if(!res.isEmpty()) {
-            System.out.println(res);
-        }else{
-            System.out.println("Not Present");
-        }
-    }
 }

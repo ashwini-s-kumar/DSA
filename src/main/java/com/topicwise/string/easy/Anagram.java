@@ -1,6 +1,7 @@
 package com.topicwise.string.easy;
 
 public class Anagram {
+    // Two string container same characters in any order , same number of times.
     private static boolean isAnagram(String str1, String str2){
         if(str1.length() != str2.length()){
             return false;

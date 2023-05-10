@@ -3,7 +3,7 @@ package com.topicwise.string.easy;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AllSubSequence {
+public class AllSubSequenceSetOrPowerSet {
     public static List<List<Character>> subSequence(String str) {
         List<List<Character>> output = new ArrayList<>();
         output.add(new ArrayList<>());
@@ -26,9 +26,28 @@ public class AllSubSequence {
         return output;
     }
 
+    private static List<String> subSequenceRecur(String str){
+        int curIndex = 0;
+        String cur = " ";
+        List<String> res = new ArrayList<>();
+        powerSet(str, res, curIndex, cur);
+        return  res;
+    }
+
+    private static void powerSet(String str, List<String> res, int curIndex, String cur){
+        if(curIndex == str.length()){
+            res.add(cur);
+            return;
+        }
+        powerSet(str, res, curIndex+1, cur);
+        powerSet(str, res, curIndex+1, cur+str.charAt(curIndex));
+    }
+
     public static void main(String [] ar){
-        String str = "ABC";
-        List<List<Character>> output = subSequence(str);
+        List<List<Character>> output = subSequence("ABC");
         System.out.println(output);
+
+        List<String> res = subSequenceRecur("ABC");
+        System.out.println(res);
     }
 }
