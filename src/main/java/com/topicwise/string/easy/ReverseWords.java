@@ -21,6 +21,7 @@ public class ReverseWords {
         while(!words.isEmpty()){
             str += words.pop() +" ";
         }
+        str = str.substring(0, str.length() -1);
 
         return str;
     }
