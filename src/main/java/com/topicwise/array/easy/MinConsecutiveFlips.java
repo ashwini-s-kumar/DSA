@@ -5,16 +5,15 @@ import com.topicwise.array.PrintArray;
 public class MinConsecutiveFlips {
 
     public static void makeAllElementsSame(int [] arr){
-        int res = 0;
+        double res = 0;
         for(int i = 1 ; i < arr.length; i++){
             if(arr[i] != arr[i-1]){
                 res++;
             }
         }
-        if(res % 2 != 0){
-            res++;
-        }
-        res = res/2;
+
+        System.out.println(res);
+        res = Math.ceil(res/2);
         System.out.println("The minimum flips to make all elements same in array : " + res);
     }
     public static void main(String [] arr){
