@@ -1,5 +1,7 @@
 package com.topicwise.array.difficult;
 
+import com.topicwise.array.PrintArray;
+
 import java.util.ArrayList;
 
 class Trade{
@@ -7,7 +9,7 @@ class Trade{
 }
 public class StockBuySell {
 
-    public void stock(int [] price)
+    public static void stock(int [] price)
     {
         int n = price.length;
         if(n < 1)
@@ -41,5 +43,12 @@ public class StockBuySell {
             }
             System.out.println("Total profit  : " + totalProfit);
         }
+    }
+    public static void main(String  [] aa){
+        System.out.println(" ");
+        System.out.print(" Trade stocks with the price array : ");
+        int price[] = {100, 180, 260, 310, 40, 535, 695};
+        PrintArray.print(price);
+        stock(price);
     }
 }

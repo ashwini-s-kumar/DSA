@@ -8,6 +8,7 @@ import java.util.Set;
 public class SubArrayWithGivenSum {
 
     public static void isPresent(int [] arr, int sum){
+        //prefixSum , index
         Map<Integer, Integer> map = new HashMap<>();
         int prefixSum = 0;
         int start = 0;
@@ -34,10 +35,10 @@ public class SubArrayWithGivenSum {
         }
     }
     public static void main(String [] arr){
-        int [] array = {3,4,1,10,9};
+        int [] array = {3,4,1,10,9,0};
         isPresent(array,15);
         isPresent(array,1);
         isPresent(array,6);
-
+        isPresent(array,0);
     }
 }

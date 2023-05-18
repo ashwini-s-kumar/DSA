@@ -13,13 +13,7 @@ span :
  */
 public class StockSpan {
 
-    /*
-    span =
-        case 1 : if there is a greater element on left
-            span = current index - index of closest greater element on left
-        case 2 : If there is no greater element on left
-            span = current index + 1
-     */
+
     static void printSpan(int [] arr)
     {
         Deque<Integer> stack = new ArrayDeque<>();

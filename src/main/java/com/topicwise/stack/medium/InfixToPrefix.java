@@ -70,7 +70,6 @@ public class InfixToPrefix {
             res += stack.pop();
         }
         System.out.println(res);
-        //res  = InfixToPostfix.convert(str);
         String result = reverse(res.toCharArray(), 0, res.length()-1);
         return result;
     }

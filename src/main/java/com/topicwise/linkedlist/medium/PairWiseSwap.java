@@ -42,8 +42,10 @@ public class PairWiseSwap {
         {
             prev.next = cur.next;
             prev = cur;
+
             Node next = cur.next.next;
             cur.next.next = cur;
+
             cur = next;
         }
         prev.next = cur;

@@ -12,11 +12,16 @@ public class EquilibriumPoint {
         int leftPrefix = 0;
 
         for(int i = 0; i < arr.length; i ++){
-            if(leftPrefix == rightPrefix - arr[i]){
+            if(leftPrefix == rightPrefix - leftPrefix - arr[i]){
                 System.out.println("The equilibrium point : " + i);
             }
             leftPrefix += arr[i];
         }
         System.out.println("No equilibrium point");
+    }
+
+    public static void main(String [] arr){
+        int [] a = { 3, 2, 1, 7, 5,1};
+        printEquilibrium(a);
     }
 }

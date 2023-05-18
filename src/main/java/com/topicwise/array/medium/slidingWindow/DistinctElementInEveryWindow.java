@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DistinctElementInEveryWindow {
-    public void distinct(int [] arr, int k){
+    public static void distinct(int [] arr, int k){
         Map<Integer, Integer> fre = new HashMap<>();
         int distinct = 0;
         int [] output = new int [arr.length - k + 1];
@@ -37,5 +37,12 @@ public class DistinctElementInEveryWindow {
         System.out.println("Distinct element in every window of : "+ k +" is : ");
         PrintArray printArray = new PrintArray();
         printArray.print(output);
+    }
+    public static void main(String [] arr){
+        System.out.println(" ");
+        System.out.print(" The given array : ");
+        int [] arr16 = {1, 1, 1, 3, 4, 2, 3};
+        PrintArray.print(arr16);
+        distinct(arr16, 4);
     }
 }

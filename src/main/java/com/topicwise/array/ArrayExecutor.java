@@ -76,11 +76,7 @@ public class ArrayExecutor {
         System.out.print( " is : "+ maxDifference.maxDiff(arr4));
 
 
-        System.out.println(" ");
-        System.out.print(" Trade stocks with the price array : ");
-        int price[] = {100, 180, 260, 310, 40, 535, 695};
-        printArray.print(price);
-        stockBuySell.stock(price);
+
 
         System.out.println(" ");
         System.out.print(" Max 1's in the binary array : ");
@@ -145,11 +141,7 @@ public class ArrayExecutor {
         printArray.print(arr15);
         checkSubArrWithGivenSum.checkSubArrayExist(arr15, 33);
 
-        System.out.println(" ");
-        System.out.print(" The given array : ");
-        int [] arr16 = {1, 1, 1, 3, 4, 2, 3};
-        printArray.print(arr16);
-        distinctElementInEveryWindow.distinct(arr16, 4);
+
 
     }
 }

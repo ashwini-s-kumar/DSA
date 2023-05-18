@@ -17,6 +17,7 @@ public class InsertAtEnd {
             cur = cur.next;
         }
 
+        newN.prev = cur;
         cur.next = newN;
         return head;
     }
