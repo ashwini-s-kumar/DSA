@@ -6,16 +6,19 @@ public class MediumOfTwoSortedArray {
         if(n1 > n2){
             return median(arr2, arr1, n2, n1);
         }
-        int begin1 = 0, end1 = n1, min1, min2, max1, max2, i1, i2;
-        while(begin1 <= end1){
-            i1 = (begin1 + end1) / 2;
-            i2 = (n1 + n2 + 1) / 2 - i1;
+        int low = 0, high = n1, min1, min2, max1, max2, cut1, cut2;
+        while(low <= high){
+            cut1 = (low + high) / 2;
+            cut2 = ((n1 + n2 + 1) / 2) - cut1;
 
-            min1 = (i1 == n1) ? Integer.MAX_VALUE : arr1[i1];
-            max1 = (i1 == 0) ? Integer.MIN_VALUE : arr1[i1-1];
+            // left halfs in both ethe arrays
+            max1 = (cut1 == 0) ? Integer.MIN_VALUE : arr1[cut1-1];
+            max2 = (cut2 == 0) ? Integer.MIN_VALUE : arr2[cut2-1];
 
-            min2 = (i2 == n2) ? Integer.MAX_VALUE : arr2[i2];
-            max2 = (i2 == 0) ? Integer.MIN_VALUE : arr2[i2-1];
+            // right halfs in both the arrays
+            min1 = (cut1 == n1) ? Integer.MAX_VALUE : arr1[cut1];
+            min2 = (cut2 == n2) ? Integer.MAX_VALUE : arr2[cut2];
+
 
             if(max1 <= min2 && max2 <= min1){
                 if((n1 +n2)%2 ==0){
@@ -25,9 +28,9 @@ public class MediumOfTwoSortedArray {
                 }
             }
             if (max1 > min2){
-                end1 = i1 - 1;
+                high = cut1 - 1;
             }else {
-                begin1 = i1 + 1;
+                low = cut1 + 1;
             }
         }
         return  -1 ;
