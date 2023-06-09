@@ -152,3 +152,13 @@ class DfsArticulationPoints
         g3.AP();
     }
 }
+
+
+/*
+Articulation points in first graph
+0 3
+Articulation points in Second graph
+1 2
+Articulation points in Third graph
+1
+ */

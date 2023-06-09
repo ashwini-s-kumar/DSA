@@ -1,5 +1,6 @@
 package com.topicwise.binarytree.easy.views;
 
+import com.topicwise.binarytree.BinaryTree;
 import com.topicwise.binarytree.NodeHD;
 
 import java.util.*;
@@ -49,5 +50,12 @@ public class VerticalView {
                 System.out.print(" " + x +" ");
             System.out.println(" " +" ");
         }
+    }
+
+    public static void main(String [] a){
+        NodeHD simpleBinaryBTWithHD = BinaryTree.getSimpleBinaryBTwithHD();
+        System.out.println(" ");
+        System.out.println("Vertical View of  simpleBinaryBT :");
+        VerticalView.verticalView(simpleBinaryBTWithHD);
     }
 }

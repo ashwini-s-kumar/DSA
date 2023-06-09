@@ -51,11 +51,6 @@ public class BTExecutor {
         System.out.println("levelOrderLineWise traversal of simpleBinaryBT:");
         LevelOrderLineWise.levelOrderLineWise(simpleBinaryBT);
 
-        System.out.println("");
-        System.out.println("LeftView traversal of simpleBinaryBT:");
-        LeftView.simpleLeftView(BinaryTree.getChildSumPropertyBT());
-        System.out.println("=========================================");
-        LeftView.leftView(BinaryTree.getChildSumPropertyBT());
 
         System.out.println("");
         System.out.println("RightView traversal of simpleBinaryBT:");
@@ -157,9 +152,6 @@ public class BTExecutor {
         System.out.println(" ");
         System.out.println("minTime to burn  simpleBinaryBT from leaf node 6 : "+ burn.minBurnTime(simpleBinaryBT,6)+" Secs");
 
-        simpleBinaryBT = BinaryTree.getSimpleBinaryBT();
-        System.out.println(" ");
-        System.out.println("minTime to burn  simpleBinaryBT from target node "+simpleBinaryBT.left.left.data+"  : "+ BurnBTFromTargetNode.getBurnTimefromTargetNode(simpleBinaryBT,simpleBinaryBT.left.left)+" Secs");
 
         System.out.println(" ");
         System.out.println("clockWiseView of  simpleBST :");

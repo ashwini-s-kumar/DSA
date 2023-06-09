@@ -10,7 +10,6 @@ public class BfsKhansTopologicalSorting {
     public static void topologicalSort(ArrayList<ArrayList<Integer>> adjList, int v)
     {
         int [] indegree = new int[v];
-        Queue<Integer> q = new ArrayDeque<>();
 
         for(int i = 0; i<v;i++)
         {
@@ -24,6 +23,8 @@ public class BfsKhansTopologicalSorting {
                 indegree[j]++;
             }
         }
+
+        Queue<Integer> q = new ArrayDeque<>();
         for(int i = 0; i<v;i++)
         {
             if(indegree[i] == 0)

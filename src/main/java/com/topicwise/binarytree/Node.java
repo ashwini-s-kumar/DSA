@@ -15,4 +15,14 @@ public class Node {
         left = null;
         right = null;
     }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "data=" + data +
+                ", height=" + height +
+                ", left=" + left +
+                ", right=" + right +
+                '}';
+    }
 }

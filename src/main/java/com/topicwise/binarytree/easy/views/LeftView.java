@@ -1,5 +1,6 @@
 package com.topicwise.binarytree.easy.views;
 
+import com.topicwise.binarytree.BinaryTree;
 import com.topicwise.binarytree.Node;
 
 import java.util.LinkedList;
@@ -36,5 +37,15 @@ public class LeftView {
             }
             System.out.println(" ");
         }
+    }
+
+    public static void main(String [] arr){
+        System.out.println("");
+        System.out.println("LeftView traversal of simpleBinaryBT:");
+        LeftView.simpleLeftView(BinaryTree.getChildSumPropertyBT());
+
+        System.out.println("=========================================");
+        LeftView.leftView(BinaryTree.getChildSumPropertyBT());
+
     }
 }

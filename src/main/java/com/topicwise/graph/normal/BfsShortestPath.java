@@ -7,11 +7,11 @@ import java.util.ArrayList;
 import java.util.Queue;
 
 public class BfsShortestPath {
-    static void printDistance(ArrayList<ArrayList<Integer>> adj, int v, int source)
+    static void printDistance(ArrayList<ArrayList<Integer>> adj, int V , int source)
     {
         Queue<Integer> q = new ArrayDeque();
-        boolean  [] visited = new boolean[v+1];
-        int [] dist = new int[v+1];
+        boolean  [] visited = new boolean[V+1];
+        int [] dist = new int[V+1];
 
         q.add(source);
         dist[source] = 0;
@@ -19,14 +19,14 @@ public class BfsShortestPath {
 
         while(!q.isEmpty())
         {
-            int cur = q.poll();
-            System.out.print(" " + cur +"-"+dist[cur]+" ");
+            int u = q.poll();
+            System.out.print(" " + u +"-"+dist[u]+" ");
 
-            for(int x : adj.get(cur))
+            for(int x : adj.get(u))
             {
                 if(visited[x] == false)
                 {
-                    dist[x] = dist[cur] + 1;
+                    dist[x] = dist[u] + 1;
                     visited[x] = true;
                     q.add(x);
                 }

@@ -1,5 +1,6 @@
 package com.topicwise.binarytree.difficult.operations;
 
+import com.topicwise.binarytree.BinaryTree;
 import com.topicwise.binarytree.Node;
 
 import java.util.*;
@@ -37,8 +38,10 @@ public class BurnBTFromTargetNode {
         if(unDirectedGraph.containsKey(target)) {
             Queue<Node> q = new ArrayDeque<Node>();
             Set<Node> visited = new HashSet<>();
+
             q.add(target);
             visited.add(target);
+
             while(!q.isEmpty())
             {
                 int count = q.size();
@@ -58,5 +61,13 @@ public class BurnBTFromTargetNode {
                 System.out.println("");
             }
         }
+    }
+
+    public static void main(String [] a){
+
+        Node simpleBinaryBT = BinaryTree.getSimpleBinaryBT();
+        System.out.println(" ");
+        System.out.println("minTime to burn  simpleBinaryBT from target node "+simpleBinaryBT.left.left.data+"  : "+ BurnBTFromTargetNode.getBurnTimefromTargetNode(simpleBinaryBT,simpleBinaryBT.left.left)+" Secs");
+
     }
 }
