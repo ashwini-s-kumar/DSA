@@ -20,7 +20,7 @@ Output: 92 40 18 8 59 26
 
         for(int i = 0; i < r; i++){
             for(int j = 0; j < c; j++){
-                A[i][j] = A[i][j] * B[i][j];
+                A[i][j] = A[i][j] * B[j][i];
             }
         }
 
@@ -31,6 +31,7 @@ Output: 92 40 18 8 59 26
         int [][] mat1= {{4,8},
                 {0,2},
                 {1,6}};
-        int [][] mat2 = {{5,2}};
+        int [][] mat2 = {{5,2,2}, {1,1,1}};
+        PrintMatrix.printRowWise(multiplyMatrix(mat1, mat2));
     }
 }

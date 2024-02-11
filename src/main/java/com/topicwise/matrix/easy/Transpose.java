@@ -10,7 +10,6 @@ public class Transpose {
         arr[j][i] = temp;
       }
     }
-    PrintMatrix.printRowWise(arr);
   }
 
   public static void main(String [] arr) {
@@ -19,5 +18,6 @@ public class Transpose {
                 {3, 4, 20},
                 {5, 6, 30}};
     transpose(a);
+    PrintMatrix.printRowWise(a);
   }
 }
