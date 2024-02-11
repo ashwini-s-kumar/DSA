@@ -1,4 +1,4 @@
-package com.topicwise.math;
+package com.topicwise.mathematics;
 
 public class Arithmetics {
     public  static int max(int a, int b)

@@ -1,7 +1,7 @@
 package com.topicwise.array.medium.kadaneAlgo;
 
 import com.topicwise.array.PrintArray;
-import com.topicwise.math.Arithmetics;
+import com.topicwise.mathematics.Arithmetics;
 
 public class MaxCircularSumSubArray {
     public static int maxCircularSumSubArray(int [] arr)

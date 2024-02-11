@@ -1,7 +1,7 @@
 package com.topicwise.array.easy;
 
 import com.topicwise.array.PrintArray;
-import com.topicwise.math.Arithmetics;
+import com.topicwise.mathematics.Arithmetics;
 
 public class MaxDifference {
     public static int maxDiff(int [] arr)
