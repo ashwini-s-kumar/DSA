@@ -6,9 +6,11 @@ public class CheckPrime {
 
   Auxiliary space: O(1)
    */
-  static boolean isPrime(int n){
-    double sqrt = Math.sqrt(n);
-    for(int i = 2; i <= sqrt; i++){
+  public static boolean isPrime(int n){
+    if(n <= 1){
+      return false;
+    }
+    for(int i = 2; i*i <= n; i++){
       if( n % i == 0){
         return false;
       }
