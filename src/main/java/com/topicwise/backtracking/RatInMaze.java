@@ -5,6 +5,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class RatInMaze {
+  /*
+  Time : O( 4*( n^ 2) )
+  space : O(n^2)
+   */
   public static void main(String [] arr){
     int [][]maze = {{1,0,0,0},
             {1,1,0,1},
