@@ -1,50 +1,43 @@
 package com.topicwise.sorting;
 
+import java.util.ArrayList;
+
 public class MergeSort {
 
-    public void merge(int [] arr, int l, int m, int r)
+    public void merge(int [] arr, int low, int mid, int high)
     {
-        int n1 = m-l+1;
-        int n2 = r-m;
+        ArrayList<Integer> temp = new ArrayList<>(); // temporary array
+        int left = low;      // starting index of left half of arr
+        int right = mid + 1;   // starting index of right half of arr
 
-        int [] left = new int [n1];
-        int [] right = new int [n2];
+        //storing elements in the temporary array in a sorted manner//
 
-        for(int i = 0; i < n1; i++)
-        {
-            left[i] = arr[l + i];
-        }
-        for(int j = 0; j < n2; j++)
-        {
-            right[j] = arr[m+1+j];
-        }
-        int i = 0;
-        int j = 0;
-        int k = l;
-        while( i < n1 && j < n2)
-        {
-            if(left[i] <= right[j])
-            {
-                arr[k] = left[i];
-                i++;
+        while (left <= mid && right <= high) {
+            if (arr[left] <= arr[right]) {
+                temp.add(arr[left]);
+                left++;
+            } else {
+                temp.add(arr[right]);
+                right++;
             }
-            else{
-                arr[k] = right[j];
-                j++;
-            }
-            k++;
         }
-        while(i<n1)
-        {
-            arr[k] = left[i];
-            i++;
-            k++;
+
+        // if elements on the left half are still left //
+
+        while (left <= mid) {
+            temp.add(arr[left]);
+            left++;
         }
-        while(j<n2)
-        {
-            arr[k] = right[j];
-            j++;
-            k++;
+
+        //  if elements on the right half are still left //
+        while (right <= high) {
+            temp.add(arr[right]);
+            right++;
+        }
+
+        // transfering all elements from temporary to arr //
+        for (int i = low; i <= high; i++) {
+            arr[i] = temp.get(i - low);
         }
     }
 

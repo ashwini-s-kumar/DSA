@@ -2,7 +2,7 @@ package com.topicwise.recursion.easy;
 
 public class Factorial {
     // 5 !  = 1 * 2 * 3 * 4 * 5
-    private static int factorial(int n){
+    public static int factorial(int n){
         if(n == 1){
             return 1;
         }
