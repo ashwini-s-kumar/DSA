@@ -1,4 +1,4 @@
-package com.topicwise.backtracking;
+package com.topicwise.recursion.subSequencePattern;
 
 import java.util.ArrayList;
 import java.util.List;

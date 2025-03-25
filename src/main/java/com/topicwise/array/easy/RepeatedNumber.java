@@ -1,9 +1,23 @@
 package com.topicwise.array.easy;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class RepeatedNumber {
+
+    public static int repeatedNumberUsingSet(int [] a){
+
+        Set<Integer> set = new HashSet<>();
+        for ( int i = 0; i < a.length; i++) {
+            if(set.contains(a[i])){
+                return a[i];
+            }
+            set.add(a[i]);
+        }
+        return -1;
+    }
     public static int repeatedNumber( int[] A) {
         Map<Integer, Integer> map = new HashMap<>();
         for(int i = 0; i < A.length; i++)
@@ -20,5 +34,7 @@ public class RepeatedNumber {
         int [] array = {2,-3,2,4,1,5,-9,0,0};
         int res = RepeatedNumber.repeatedNumber(array);
         System.out.println("repeated number :"+res);
+
+        System.out.println("repeated number using set :"+ RepeatedNumber.repeatedNumberUsingSet(array));
     }
 }

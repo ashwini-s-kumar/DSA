@@ -1,4 +1,4 @@
-package com.topicwise.recursion.easy;
+package com.topicwise.recursion.strongHold;
 
 public class PowerOfNumber {
     public static int power(int num, int n){

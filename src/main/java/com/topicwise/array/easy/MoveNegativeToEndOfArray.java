@@ -11,11 +11,18 @@ public class MoveNegativeToEndOfArray {
         {
             while(i < j && arr[j] < 0)
                 j--;
-            if(arr[i] < 0)
-                MoveNumberToEndOfArray.swap(arr, i, j);
+            if(arr[i] < 0) {
+                swap(arr, i, j);
+            }
             i++;
         }
         PrintArray.print(arr);
+    }
+    static void swap(int []arr, int i, int j)
+    {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
 
     public static void main(String [] arr){

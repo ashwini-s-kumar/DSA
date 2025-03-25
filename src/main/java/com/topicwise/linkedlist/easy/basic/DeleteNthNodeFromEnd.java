@@ -20,14 +20,12 @@ Traverse the list and find the length M. Again traverse the linked list from the
         }
         if(len < m)
             return null;
-        if(len - m == 0)
+        if(len == m)
             return head.next;
-        int count = 1;
+        int pos = len - m + 1;
         cur = head;
-        while(count != len - m  && cur != null)
-        {
+        for(int i = 1; i <= pos - 2 && cur != null; i++) {
             cur = cur.next;
-            count ++;
         }
         cur.next = cur.next.next;
         return head;
@@ -44,7 +42,7 @@ Traverse the list and find the length M. Again traverse the linked list from the
         PrintLinkedList.print(head);
         System.out.println(" ");
         System.out.println("The deleteNthNodeFromEnd is :");
-        PrintLinkedList.print(deleteNthNodeFromEnd(head, 5));
+        PrintLinkedList.print(deleteNthNodeFromEnd(head, 2));
 
     }
 }

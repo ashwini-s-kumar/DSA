@@ -2,7 +2,7 @@ package com.topicwise.array.medium.slidingWindow;
 
 public class CheckSubArrWithGivenSum {
     //works only for non-negative array
-    public void checkSubArrayExist(int [] arr, int sum){
+    public static void checkSubArrayExist(int [] arr, int sum){
         int cur_sum = arr[0],  start = 0;
         for (int i = 1; i <= arr.length; i++){
             while (cur_sum > sum){
@@ -17,5 +17,12 @@ public class CheckSubArrWithGivenSum {
                 cur_sum += arr[i];
             }
         }
+    }
+
+    public static void main(String [] arr) {
+        int [] arr15 = {1, 4, 20, 3, 10, 5};
+        System.out.println(" ");
+        System.out.print(" The given array : ");
+        checkSubArrayExist(arr15, 33);
     }
 }

@@ -7,6 +7,7 @@ import com.topicwise.array.difficult.TrapRainWater;
 import com.topicwise.array.easy.*;
 import com.topicwise.array.medium.kadaneAlgo.LongestEvenOddSubArray;
 import com.topicwise.array.medium.kadaneAlgo.MaxCircularSumSubArray;
+import com.topicwise.array.medium.kadaneAlgo.MaxConsecutive1sBinaryArray;
 import com.topicwise.array.medium.kadaneAlgo.MaxSubArraySum;
 import com.topicwise.array.medium.mooreVotingAlgo.MajorityElement;
 import com.topicwise.array.medium.patterns.PascalTriangle;
