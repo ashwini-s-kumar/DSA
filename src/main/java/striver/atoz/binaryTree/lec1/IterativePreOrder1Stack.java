@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-public class PreOrderIterative {
+public class IterativePreOrder1Stack {
     public static void main(String [] arr) {
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
